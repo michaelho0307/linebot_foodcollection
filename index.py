@@ -12,8 +12,8 @@ app = Flask(__name__)
 
 # LINE 聊天機器人的基本資料
 line_bot_api = LineBotApi(
-    ChannelAccessToken)
-handler = WebhookHandler(ChannelSecret)
+    os.environ["ChannelAccessToken"])
+handler = WebhookHandler(os.environ["ChannelSecret"])
 
 # 接收 LINE 的資訊
 
