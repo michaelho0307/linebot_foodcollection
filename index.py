@@ -1,4 +1,5 @@
 # modules
+from __future__ import unicode_literals
 import os
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
@@ -35,10 +36,11 @@ def callback():
 # 學你說話
 @handler.add(MessageEvent, message=TextMessage)
 def echo(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text)
-    )
+    if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef":
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=event.message.text)
+        )
 
 
 if __name__ == "__main__":
