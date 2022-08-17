@@ -7,7 +7,7 @@ from linebot.exceptions import InvalidSignatureError
 
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 #pymongo
-import pymongo
+#import pymongo
 
 app = Flask(__name__)
 
