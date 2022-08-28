@@ -36,7 +36,8 @@ def callback():
 def echo(event):
     msg = str(event.message.text).strip()
     source_type = event.source.type
-    print(cluster)
+    for db in cluster.list_databases():
+        print(db)
 
     if source_type == 'user':
         profile = line_bot_api.get_profile(event.source.user_id)
