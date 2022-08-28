@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 ### modules
 # line bot sdk
 from linebot import LineBotApi, WebhookHandler
@@ -5,7 +6,7 @@ from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 
-from __future__ import unicode_literals
+
 from flask import Flask, request, abort
 import os
 
