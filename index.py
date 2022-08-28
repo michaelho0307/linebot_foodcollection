@@ -13,12 +13,10 @@ import os
 
 app = Flask(__name__)
 
-# LINE bot basic info
+# LINE BOT basic info
 line_bot_api = LineBotApi(os.environ["ChannelAccessToken"])
 handler = WebhookHandler(os.environ["ChannelSecret"])
 client = pymongo.MongoClient("mongodb+srv://michaelho:root@cluster0.kgvqwtd.mongodb.net/?retryWrites=true&w=majority")
-#myclient = pymongo.MongoClient("mongodb+srv://michaelho:root@cluster0.kgvqwtd.mongodb.net/?retryWrites=true&w=majority")
-# 接收 LINE 的資訊
 
 
 @app.route("/callback", methods=['POST'])
@@ -30,7 +28,6 @@ def callback():
         handler.handle(body, signature)
     except InvalidSignatureError:
         abort(400)
-
     return 'OK'
 
 
