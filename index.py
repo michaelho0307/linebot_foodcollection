@@ -8,6 +8,7 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 
 from flask import Flask, request, abort
+import pymongo
 import os
 
 app = Flask(__name__)
