@@ -34,11 +34,16 @@ def callback():
 # talk
 @handler.add(MessageEvent, message=TextMessage)
 def echo(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text)
-    )
-    print(client)
+    msg = str(event.source.type).strip()
+    print(msg)
+    #profile = line_bot_api.get_profile(event.source.user_id)
+    #username = profile.display_name
+    #uid = profile.user_id
+
+
+
+
+
 
 
 if __name__ == "__main__":
