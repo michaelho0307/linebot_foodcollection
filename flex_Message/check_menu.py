@@ -17,11 +17,10 @@ def get_menu_bubble(name, num, uri):
 def get_carousel(restaurant_list):
     restaurants = []
     for restaurant in restaurant_list:
-        restaurants.append(get_menu_bubble(restaurant.name, restaurant.num, restaurant.uri))
+        restaurants.append(get_menu_bubble(restaurant["name"], restaurant["num"], restaurant["uri"]))
     carousel = {
         "type": "carousel",
         "content": restaurants
     }
     content = FlexSendMessage(alt_text='查閱菜單', contents=carousel)
     return content
-
