@@ -1,0 +1,59 @@
+{
+    "type": "bubble",
+    "size": "kilo",
+    "hero": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "查閱訂單",
+          "size": "xl",
+          "align": "center",
+          "margin": "sm",
+          "color": "#FFFFFF"
+        }
+      ],
+      "backgroundColor": "#CAC6F5",
+      "height": "60px",
+      "alignItems": "center",
+      "justifyContent": "center"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "label": "當月訂單",
+            "text": "查看當月訂單"
+          },
+          "height": "sm",
+          "color": "#B892FF"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "label": "一周訂單",
+            "text": "查看一周訂單"
+          },
+          "height": "sm",
+          "color": "#B892FF"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "label": "最新訂單",
+            "text": "查看最新訂單"
+          },
+          "height": "sm",
+          "color": "#B892FF",
+          "style": "primary"
+        }
+      ]
+    }
+  }

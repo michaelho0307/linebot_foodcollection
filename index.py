@@ -15,7 +15,7 @@ import re
 
 from flex_Message import (
     add_menu, carousel, check_menu, 
-    favorite, reminder
+    favorite, reminder, history
 )
 
 app = Flask(__name__)
@@ -66,7 +66,6 @@ def handle_message(event):
                 }
             ]
             content = check_menu.get_carousel(restaurant_list)
-            print(content)
             line_bot_api.push_message(uid, content)
 
         elif re.match("@新增菜單", msg): ##### add_menu
@@ -80,9 +79,12 @@ def handle_message(event):
             pass
 
         elif re.match("@旋轉轉盤", msg): ##### carousel
-            pass
-
-
+            content = carousel.get_carousel()
+            line_bot_api.push_message(uid, content)
+        
+        elif re.match("@歷史訂單",msg): ##### history
+            content = history.get_history()
+            line_bot_api.push_message(uid, content)
         
 
         ##### @新增菜單
@@ -95,7 +97,18 @@ def handle_message(event):
         elif re.match('查看餐廳列表', msg):
             pass
         
+        ##### @歷史訂單
+        elif re.match('查看當月訂單',msg):
+            pass
 
+        elif re.match('查看一周訂單', msg):
+            pass
+
+        elif re.match('查看最新訂單', msg):
+            pass
+        
+
+        
     # Group-related Development
     elif source_type == 'group':
         pass

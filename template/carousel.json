@@ -1,0 +1,60 @@
+{
+    "type": "bubble",
+    "size": "micro",
+    "direction": "ltr",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "旋轉轉盤",
+          "weight": "bold",
+          "size": "xxl",
+          "margin": "md",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "最終結果揭曉",
+          "size": "xs",
+          "color": "#aaaaaa",
+          "wrap": true,
+          "align": "center"
+        },
+        {
+          "type": "separator",
+          "margin": "xxl"
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "就決定是你了！",
+              "margin": "md",
+              "wrap": true,
+              "align": "center"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "我要吃飯",
+                "text": "我要吃七里亭"
+              },
+              "color": "#00B616",
+              "style": "primary",
+              "margin": "xl"
+            }
+          ]
+        }
+      ]
+    },
+    "styles": {
+      "footer": {
+        "separator": true
+      }
+    }
+  }
