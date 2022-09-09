@@ -13,10 +13,7 @@ import pymongo
 import os
 import re
 
-from flex_Message import (
-    add_menu, carousel, check_menu, 
-    favorite, reminder, history
-)
+import flexHandler
 
 app = Flask(__name__)
 
@@ -65,11 +62,11 @@ def handle_message(event):
                     'uri': 'https://www.youtube.com/watch?v=0-4mm0e2h44'
                 }
             ]
-            content = check_menu.get_carousel(restaurant_list)
+            content = flexHandler.get_menu_carousel(restaurant_list)
             line_bot_api.push_message(uid, content)
 
         elif re.match("@新增菜單", msg): ##### add_menu
-            content = add_menu.get_add_menu()
+            content = flexHandler.get_add_menu()
             line_bot_api.push_message(uid, content)
 
         elif re.match("@應付金額及點餐提醒",msg): ##### reminder
@@ -79,11 +76,11 @@ def handle_message(event):
             pass
 
         elif re.match("@旋轉轉盤", msg): ##### carousel
-            content = carousel.get_carousel()
+            content = flexHandler.get_carousel()
             line_bot_api.push_message(uid, content)
         
         elif re.match("@歷史訂單",msg): ##### history
-            content = history.get_history()
+            content = flexHandler.get_history()
             line_bot_api.push_message(uid, content)
         
 
@@ -106,8 +103,6 @@ def handle_message(event):
 
         elif re.match('查看最新訂單', msg):
             pass
-        
-
         
     # Group-related Development
     elif source_type == 'group':

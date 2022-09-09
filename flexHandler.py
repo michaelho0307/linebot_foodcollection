@@ -1,6 +1,11 @@
 import json
 from linebot.models import FlexSendMessage
 
+def get_add_menu():
+    flexMessage = json.load(open('./template/add_menu.json','r+',encoding='UTF-8'))
+    content = FlexSendMessage(alt_text='新增菜單', contents=flexMessage)
+    return content
+
 def get_menu_bubble(name, num, uri):
     bubble = json.load(open('./template/check_menu.json','r+',encoding='UTF-8'))
     body_content = bubble["body"]["contents"]
@@ -14,7 +19,7 @@ def get_menu_bubble(name, num, uri):
     footer_content[0]["action"]["data"] = f"STAR-{name}"
     return bubble
 
-def get_carousel(restaurant_list):
+def get_menu_carousel(restaurant_list):
     restaurants = []
     for restaurant in restaurant_list:
         restaurants.append(get_menu_bubble(restaurant["name"], restaurant["num"], restaurant["uri"]))
@@ -25,6 +30,17 @@ def get_carousel(restaurant_list):
     content = FlexSendMessage(alt_text='查閱菜單', contents=carousel)
     print(content)
     return content
+
+def get_carousel():
+    flexMessage = json.load(open('./template/carousel.json','r+',encoding='UTF-8'))
+    content = FlexSendMessage(alt_text='旋轉轉盤', contents=flexMessage)
+    return content
+
+def get_history():
+    flexMessage = json.load(open('./template/history.json','r+',encoding='UTF-8'))
+    content = FlexSendMessage(alt_text='歷史訂單', contents=flexMessage)
+    return content
+
 
 
 
