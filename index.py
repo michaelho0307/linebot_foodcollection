@@ -72,7 +72,7 @@ def handle_message(event):
             content = add_menu.get_add_menu()
             line_bot_api.push_message(uid, content)
 
-        elif re.match("@應付金額及點餐提醒"): ##### reminder
+        elif re.match("@應付金額及點餐提醒",msg): ##### reminder
             pass
         
         elif re.match("@我的最愛", msg): ##### favorite
