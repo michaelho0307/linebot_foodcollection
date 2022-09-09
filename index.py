@@ -35,6 +35,8 @@ def callback():
     return 'OK'
 
 
+
+
 # Message Event
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -48,7 +50,6 @@ def handle_message(event):
         uid = profile.user_id
 
         #user = userInfo.getUser(personSchema,uid)
-
 
         ### default functionality
         if re.match("@查閱餐廳菜單" ,msg): ##### check_menu
@@ -65,28 +66,15 @@ def handle_message(event):
 
         elif re.match("@旋轉轉盤", msg): ##### carousel
             pass
-            
-        
-
-
-
 
     ### Group-related Development
     elif source_type == 'group':
         pass
 
-
-
 # Postback Event
-@handler.add(PostbackEvent)
+@handler.add(PostbackEvent, message=None)
 def handle_postback(event):
-    pass
-
-
-
-
-
-
+    print(event)
 
 
 
