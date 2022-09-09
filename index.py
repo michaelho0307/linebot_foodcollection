@@ -66,6 +66,7 @@ def handle_message(event):
                 }
             ]
             content = check_menu.get_carousel(restaurant_list)
+            line_bot_api.push_message(uid, content)
 
         elif re.match("@新增菜單", msg): ##### add_menu
             content = add_menu.get_add_menu()
