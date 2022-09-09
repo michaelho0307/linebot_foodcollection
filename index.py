@@ -17,7 +17,12 @@ app = Flask(__name__)
 # LINE BOT basic info
 line_bot_api = LineBotApi(os.environ["ChannelAccessToken"])
 handler = WebhookHandler(os.environ["ChannelSecret"])
-cluster = pymongo.MongoClient("mongodb+srv://michaelho:root@cluster0.kgvqwtd.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://michaelho:root@cluster0.kgvqwtd.mongodb.net/?retryWrites=true&w=majority")
+database = client['LinebotDB']
+personSchema = database['personSchema']
+groupSchema = database['groupSchema']
+
+
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -36,8 +41,6 @@ def callback():
 def echo(event):
     msg = str(event.message.text).strip()
     source_type = event.source.type
-    for db in cluster.list_databases():
-        print(db)
 
     if source_type == 'user':
         profile = line_bot_api.get_profile(event.source.user_id)
@@ -45,6 +48,7 @@ def echo(event):
         uid = profile.user_id
 
         user = userInfo.getUser(uid)
+
 
 
 
