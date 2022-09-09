@@ -33,7 +33,7 @@
           "type": "button",
           "action": {
             "type": "postback",
-            "data": "七里亭",
+            "data": "DEL-七里亭",
             "label": "刪除餐廳",
             "displayText": "刪除餐廳！"
           },
@@ -75,7 +75,7 @@
           "action": {
             "type": "postback",
             "label": "加入最愛",
-            "data": "七里亭",
+            "data": "STAR-七里亭",
             "displayText": "加入最愛！"
           },
           "color": "#EF4E00",
