@@ -54,7 +54,8 @@ def handle_message(event):
             pass
 
         elif re.match("@新增菜單", msg): ##### add_menu
-            return add_menu.get_add_menu()
+            content = add_menu.get_add_menu()
+            line_bot_api.push_message(uid, content)
 
         elif re.match("@應付金額及點餐提醒"): ##### reminder
             pass
