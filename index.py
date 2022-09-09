@@ -77,8 +77,8 @@ def handle_message(event):
 # Postback Event
 @handler.add(PostbackEvent)
 def handle_postback(event):
-    print(event)
-
+    msg = event.postback.data
+    print(msg)
 
 
 if __name__ == "__main__":
