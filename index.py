@@ -78,7 +78,7 @@ def handle_message(event):
 
 
 # Postback Event
-@handle.add(PostbackEvent)
+@handler.add(PostbackEvent)
 def handle_postback(event):
     pass
 
