@@ -3,7 +3,10 @@ from __future__ import unicode_literals
 # line bot sdk
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot.models import (
+    MessageEvent, TextMessage, TextSendMessage,
+    PostbackEvent
+)
 
 from flask import Flask, request, abort
 import pymongo
@@ -72,9 +75,9 @@ def handle_message(event):
 
 
 # Postback Event
-#@handler.add(PostbackEvent, message=None)
-#def handle_postback(event):
-#    print(event)
+@handler.add(PostbackEvent)
+def handle_postback(event):
+    print(event)
 
 
 
