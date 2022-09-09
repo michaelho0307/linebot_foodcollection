@@ -47,9 +47,9 @@ def userInfoInit(personSchema, LineID):
         history: []
     }
     personSchema.insert_one(Info)
-    return 'OK'
+    return True
 
-def getUser(personSchemaDB, LineID):
+def getUser(personSchema, LineID):
     condition = { 'LineID': LineID }
     user = userInfo.find_one(condition)
     if user is None:

@@ -5,12 +5,12 @@ from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
-
-
 from flask import Flask, request, abort
 import pymongo
 import os
 import re
+
+import add_menu from flexMessage
 
 app = Flask(__name__)
 
@@ -21,7 +21,6 @@ client = pymongo.MongoClient("mongodb+srv://michaelho:root@cluster0.kgvqwtd.mong
 database = client['LinebotDB']
 personSchema = database['personSchema']
 groupSchema = database['groupSchema']
-
 
 
 @app.route("/callback", methods=['POST'])
@@ -36,26 +35,54 @@ def callback():
     return 'OK'
 
 
-# talk
+# Message Event
 @handler.add(MessageEvent, message=TextMessage)
-def echo(event):
+def handle_message(event):
     msg = str(event.message.text).strip()
     source_type = event.source.type
 
+    ### User-related Development
     if source_type == 'user':
         profile = line_bot_api.get_profile(event.source.user_id)
         user_name = profile.display_name
         uid = profile.user_id
 
-        user = userInfo.getUser(uid)
+        #user = userInfo.getUser(personSchema,uid)
+
+
+        ### default functionality
+        if re.match("@查閱餐廳菜單" ,msg): ##### check_menu
+            pass
+
+        elif re.match("@新增菜單", msg): ##### add_menu
+            return add_menu.get_add_menu()
+
+        elif re.match("@應付金額及點餐提醒"): ##### reminder
+            pass
+        
+        elif re.match("@我的最愛", msg): ##### favorite
+            pass
+
+        elif re.match("@旋轉轉盤", msg): ##### carousel
+            pass
+            
+        
 
 
 
 
-    
+    ### Group-related Development
     elif source_type == 'group':
         pass
-    
+
+
+
+# Postback Event
+@handle.add(PostbackEvent)
+def handle_postback(event):
+    pass
+
+
 
 
 
