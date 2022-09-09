@@ -31,8 +31,10 @@ def get_menu_carousel(restaurant_list):
     print(content)
     return content
 
-def get_carousel():
+def get_carousel(name):
     flexMessage = json.load(open('./template/carousel.json','r+',encoding='UTF-8'))
+    flexMessage["body"]["contents"][3]["contents"][1]["action"]["text"] = f'我要吃{name}'
+    print(flexMessage)
     content = FlexSendMessage(alt_text='旋轉轉盤', contents=flexMessage)
     return content
 
@@ -41,6 +43,5 @@ def get_history():
     content = FlexSendMessage(alt_text='歷史訂單', contents=flexMessage)
     return content
 
-
-
-
+def get_reminder():
+    pass

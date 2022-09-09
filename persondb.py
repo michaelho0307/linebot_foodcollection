@@ -58,4 +58,32 @@ def getUser(personSchema, LineID):
     return user
 
 
-        
+def get_resaurant(personSchema, LineID):
+    # return the list of my restaurant which contains name(string), num(int), uri(string).
+    restaurant_list = [
+        {
+            'name': 'test',
+            'num': 10,
+            'uri': 'https://www.youtube.com/watch?v=0-4mm0e2h44'
+        }
+    ]
+    return restaurant_list
+
+def get_favorite(personSchema, LineID):
+    # return a list of restaurants, which should contain 'name', 'num', 'uri'
+    pass
+
+
+def get_random_restaurant(personSchema, LineID):
+    # return a random restaurant' s name -> string
+    pass
+
+def get_specific_time_order(personSchema, LineID, time):
+    # return the history order within the specific time.
+    pass
+
+def add_restaurent(personSchema, LineID, restaurant):
+    pass
+
+def star_restaurant(personSchema, LineID, restaurant):
+    pass

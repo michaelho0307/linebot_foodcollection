@@ -14,6 +14,7 @@ import os
 import re
 
 import flexHandler
+import persondb
 
 app = Flask(__name__)
 
@@ -55,13 +56,7 @@ def handle_message(event):
 
         ### default functionality
         if re.match("@查閱餐廳菜單" ,msg): ##### check_menu
-            restaurant_list = [
-                {
-                    'name': 'test',
-                    'num': 10,
-                    'uri': 'https://www.youtube.com/watch?v=0-4mm0e2h44'
-                }
-            ]
+            restaurant_list = persondb.get_resaurant(personSchema, uid)
             content = flexHandler.get_menu_carousel(restaurant_list)
             line_bot_api.push_message(uid, content)
 
@@ -70,17 +65,23 @@ def handle_message(event):
             line_bot_api.push_message(uid, content)
 
         elif re.match("@應付金額及點餐提醒",msg): ##### reminder
-            pass
+            text = persondb.get_reminder()
+            content = flexHandler.get_reminder()
+            line_bot_api.push_message(uid, content)
+
         
         elif re.match("@我的最愛", msg): ##### favorite
-            pass
+            restaurant_list = persondb.get_favorite(personSchema, uid)
+            content = flexHandler.get_menu_carousel(restaurant_list)
+            line_bot_api.push_message(uid, content)
 
         elif re.match("@旋轉轉盤", msg): ##### carousel
-            content = flexHandler.get_carousel()
+            restaurant_name = persondb.get_random_restaurant(personSchema, uid)
+            content = flexHandler.get_carousel(restaurant_name)
             line_bot_api.push_message(uid, content)
         
         elif re.match("@歷史訂單",msg): ##### history
-            content = flexHandler.get_history()
+            content = flexHandler.get_history(personSchema, uid)
             line_bot_api.push_message(uid, content)
         
 
@@ -119,15 +120,17 @@ def handle_postback(event):
         profile = line_bot_api.get_profile(event.source.user_id)
         user_name = profile.display_name
         uid = profile.user_id
+        
+        _ , restaurant = msg.split('-')
 
         if re.match('ADD',msg):
-            pass
+            persondb.add_restaurant(personSchema, uid, restaurant)
         
-        if re.match('DEL', msg):
-            pass
+        elif re.match('DEL', msg):
+            persondb.del_restaurant(personSchema, uid, restaurant)
         
-        if re.match('STAR', msg):
-            pass
+        elif re.match('STAR', msg):
+            persondb.star_restaurant(personSchema, uid, restaurant)
 
     elif source_type == 'group':
         pass
