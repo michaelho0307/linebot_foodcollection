@@ -41,14 +41,14 @@ personSchema = {
 
 def userInfoInit(personSchema, LineID):
     userInfo = {
-        LineID: LineID,
-        state: 0,
-        mode: 0,
-        count: 0,
-        restaurnts: [],
-        star: [],
-        payment: [],
-        history: []
+        'LineID': LineID,
+        'state': 0,
+        'mode': 0,
+        'count': 0,
+        'restaurnts': [],
+        'star': [],
+        'payment': [],
+        'history': []
     }
     personSchema.insert_one(Info)
     return True
