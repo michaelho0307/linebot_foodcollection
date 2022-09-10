@@ -1,6 +1,6 @@
 import json
-from linebot.models import FlexSendMessage
-
+from linebot.models import FlexSendMessage, TextSendMessage
+'''
 def get_add_menu():
     flexMessage = json.load(open('./template/add_menu.json','r+',encoding='UTF-8'))
     content = FlexSendMessage(alt_text='新增菜單', contents=flexMessage)
@@ -43,5 +43,27 @@ def get_history():
     content = FlexSendMessage(alt_text='歷史訂單', contents=flexMessage)
     return content
 
-def get_reminder():
-    pass
+# info = {
+#    'restaurant': string,
+#    'name': string,
+#    'price': int,
+# }
+def get_reminder(info):
+    restaurnt = info['restaurant']
+    name = info['name']
+    price = info['price']
+    msg = f'您有一筆來自{restaurant}的訂單，訂閱品項為{name}，消費金額一共是{price}元'
+    content = TextSendMessage(msg)
+    return content
+
+
+def check_order(order_list):
+    msg = '以下是您的訂單紀錄\n'
+    for order in order_list:
+        restaurant = order['restaurant']
+        name = order['name']
+        price = order['price']
+        msg += f'{restaurant} 餐廳的 {name} 一共是 {price} 元\n'
+    content = TextSendMessage(msg)
+    return content
+'''

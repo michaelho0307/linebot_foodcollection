@@ -1,6 +1,5 @@
 from __future__ import unicode_literals
-### modules
-# line bot sdk
+
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import (
@@ -52,7 +51,9 @@ def handle_message(event):
         user_name = profile.display_name
         uid = profile.user_id
 
-        #user = userInfo.getUser(personSchema,uid)
+        persondb.getUser(personSchema,uid)
+
+'''
 
         ### default functionality
         if re.match("@查閱餐廳菜單" ,msg): ##### check_menu
@@ -65,8 +66,8 @@ def handle_message(event):
             line_bot_api.push_message(uid, content)
 
         elif re.match("@應付金額及點餐提醒",msg): ##### reminder
-            text = persondb.get_reminder()
-            content = flexHandler.get_reminder()
+            info = persondb.get_reminder(personSchema, uid)
+            content = flexHandler.get_reminder(info)
             line_bot_api.push_message(uid, content)
 
         
@@ -97,13 +98,19 @@ def handle_message(event):
         
         ##### @歷史訂單
         elif re.match('查看當月訂單',msg):
-            pass
+            order_list = persondb.get_specific_time_order(personSchema, uid, 'MONTH')
+            content = flexHandler.check_order(order_list)
+            line_bot_api.push_message(uid,content)
 
         elif re.match('查看一周訂單', msg):
-            pass
+            order_list = persondb.get_specific_time_order(personSchema, uid, 'WEEK')
+            content = flexHandler.check_order(order_list)
+            line_bot_api.push_message(uid,content)
 
         elif re.match('查看最新訂單', msg):
-            pass
+            order_list = persondb.get_specific_time_order(personSchema, uid, 'NOW')
+            content = flexHandler.check_order(order_list)
+            line_bot_api.push_message(uid, content)
         
     # Group-related Development
     elif source_type == 'group':
@@ -134,6 +141,7 @@ def handle_postback(event):
 
     elif source_type == 'group':
         pass
+'''
 
 if __name__ == "__main__":
     app.run()
