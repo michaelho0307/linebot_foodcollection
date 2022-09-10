@@ -57,7 +57,7 @@ def handle_message(event):
         ### default functionality
         if re.match("@查閱餐廳菜單" ,msg): ##### check_menu
             restaurant_list = persondb.get_resaurant(personSchema, uid)
-            content = flexHandler.get_menu_carousel(restaurant_list)
+            content = flexHandler.get_menu_carousel(restaurant_list) if len(restaurant_list) else TextSendMessage(text='您目前沒有加入餐廳')
             line_bot_api.push_message(uid, content)
 
         elif re.match("@新增菜單", msg): ##### add_menu
@@ -73,7 +73,7 @@ def handle_message(event):
         
         elif re.match("@我的最愛", msg): ##### favorite
             restaurant_list = persondb.get_favorite(personSchema, uid)
-            content = flexHandler.get_menu_carousel(restaurant_list)
+            content = flexHandler.get_menu_carousel(restaurant_list) if len(restaurant_list) else TextSendMessage(text='您目前沒有最愛餐廳')
             line_bot_api.push_message(uid, content)
 
         elif re.match("@旋轉轉盤", msg): ##### carousel
