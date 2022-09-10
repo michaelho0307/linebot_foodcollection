@@ -64,12 +64,12 @@ def handle_message(event):
             content = flexHandler.get_add_menu()
             line_bot_api.push_message(uid, content)
 
-        '''
+        
         elif re.match("@應付金額及點餐提醒",msg): ##### reminder
             info = persondb.get_reminder(personSchema, uid)
             content = flexHandler.get_reminder(info)
             line_bot_api.push_message(uid, content)
-        '''
+        
         
         elif re.match("@我的最愛", msg): ##### favorite
             restaurant_list = persondb.get_favorite(personSchema, uid)
@@ -81,11 +81,11 @@ def handle_message(event):
             content = flexHandler.get_carousel(restaurant_name)
             line_bot_api.push_message(uid, content)
         
-        '''
+        
         elif re.match("@歷史訂單",msg): ##### history
             content = flexHandler.get_history(personSchema, uid)
             line_bot_api.push_message(uid, content)
-        '''
+        
 
         ##### @新增菜單
         elif re.match('探索更多周邊美食', msg):
@@ -97,7 +97,7 @@ def handle_message(event):
         elif re.match('查看餐廳列表', msg):
             pass
         
-        '''
+        
         ##### @歷史訂單
         elif re.match('查看當月訂單',msg):
             order_list = persondb.get_specific_time_order(personSchema, uid, 'MONTH')
@@ -113,7 +113,7 @@ def handle_message(event):
             order_list = persondb.get_specific_time_order(personSchema, uid, 'NOW')
             content = flexHandler.check_order(order_list)
             line_bot_api.push_message(uid, content)
-        '''
+        
 
     # Group-related Development
     elif source_type == 'group':
@@ -132,7 +132,7 @@ def handle_postback(event):
         uid = profile.user_id
         
         _ , restaurant = msg.split('-')
-'''
+
         if re.match('ADD',msg):
             persondb.add_restaurant(personSchema, uid, restaurant)
         
@@ -144,7 +144,7 @@ def handle_postback(event):
 
     elif source_type == 'group':
         pass
-'''
+
 
 if __name__ == "__main__":
     app.run()
