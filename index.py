@@ -114,7 +114,7 @@ def handle_message(event):
             content = flexHandler.check_order(order_list)
             line_bot_api.push_message(uid, content)
         '''
-        
+
     # Group-related Development
     elif source_type == 'group':
         pass
@@ -132,7 +132,7 @@ def handle_postback(event):
         uid = profile.user_id
         
         _ , restaurant = msg.split('-')
-
+'''
         if re.match('ADD',msg):
             persondb.add_restaurant(personSchema, uid, restaurant)
         
