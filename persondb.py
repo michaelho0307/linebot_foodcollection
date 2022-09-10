@@ -3,12 +3,6 @@ import random
 import datetime
 import certifi
 
-
-client = pymongo.MongoClient("mongodb+srv://michaelho:root@cluster0.kgvqwtd.mongodb.net/?retryWrites=true&w=majority",tlsCAFile=certifi.where())
-database = client['LinebotDB']
-personSchema = database['personSchema']
-LineID = 'Louis'
-
 '''
 personSchema = {
     id: ObjectId,
@@ -141,7 +135,7 @@ def get_random_restaurant(personSchema, LineID):
     name = restaurnts[index]['name']
     return name
 
-'''
+
 def get_day_interval(str1, str2):
     date1 = datetime.datetime.strptime(str1[0:10], "%Y-%m-%d")
     date2 = datetime.datetime.strptime(str2[0:10], "%Y-%m-%d")
@@ -170,7 +164,7 @@ def get_reminder(personSchema, LineID):
     user = personSchema.find_one(condition)
     payment = user['payment']
     return payment
-'''
+
 
 
 def add_restaurent(personSchema, LineID, restaurant):
