@@ -109,7 +109,7 @@
                 "type": "postback",
                 "label": "加入餐廳",
                 "data": "ADD-稻咖哩",
-                "displayText": "已加入該餐廳"
+                "displayText": "加入該餐廳"
               },
               "height": "sm",
               "style": "primary",
@@ -232,7 +232,7 @@
                 "type": "postback",
                 "label": "加入餐廳",
                 "data": "ADD-鳳城燒臘",
-                "displayText": "已加入該餐廳"
+                "displayText": "加入該餐廳"
               },
               "height": "sm",
               "style": "primary",
