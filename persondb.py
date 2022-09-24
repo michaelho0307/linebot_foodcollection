@@ -177,13 +177,12 @@ def add_restaurant(personSchema, LineID, restaurant):
     condition = {'LineID': LineID}
     user = personSchema.find_one(condition)
     restaurants = user['restaurants']
-    checker = [True for r in restaurants if r.name == restaurant]
+    checker = [True for r in restaurants if r["name"] == restaurant]
     if not any(checker):
         restaurants.append(
             {
                 "name": restaurant,
                 "menu": [],
-
             }
         )
         val = {"$set": {'restaurants': restaurants}}
