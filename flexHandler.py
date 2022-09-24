@@ -62,7 +62,7 @@ def get_menu_carousel(restaurant_list):
                                 "size": "xs",
                                 "text": "菜單數量共計：0 件",
                                 "type": "text",
-                                "wrap": true
+                                "wrap": True
                             },
                             {
                                 "margin": "xxl",
@@ -127,7 +127,7 @@ def get_menu_carousel(restaurant_list):
                     },
                     "styles": {
                         "body": {
-                            "separator": false
+                            "separator": False
                         }
                     },
                     "type": "bubble"
@@ -154,7 +154,7 @@ def get_menu_carousel(restaurant_list):
                                 "size": "xs",
                                 "text": "菜單數量共計：0 件",
                                 "type": "text",
-                                "wrap": true
+                                "wrap": True
                             },
                             {
                                 "margin": "xxl",
@@ -219,7 +219,7 @@ def get_menu_carousel(restaurant_list):
                     },
                     "styles": {
                         "body": {
-                            "separator": false
+                            "separator": False
                         }
                     },
                     "type": "bubble"
