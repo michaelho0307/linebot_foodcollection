@@ -176,7 +176,7 @@ def get_reminder(personSchema, LineID):
 def add_restaurant(personSchema, LineID, restaurant):
     condition = {'LineID': LineID}
     user = personSchema.find_one(condition)
-    restaurants = user['restaurants']
+    restaurants = user.get('restaurants') if user.get('restaurants') else []
     checker = [True for r in restaurants if r["name"] == restaurant]
     if not any(checker):
         restaurants.append(
