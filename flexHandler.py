@@ -34,7 +34,7 @@ def get_menu_carousel(restaurant_list):
         "contents": restaurants
     }
     content = FlexSendMessage(alt_text='查閱菜單', contents=carousel)
-    print(content)
+    print(carousel)
 
 
     return content
