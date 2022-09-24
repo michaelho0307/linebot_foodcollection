@@ -174,18 +174,18 @@ def get_reminder(personSchema, LineID):
 
 
 def add_restaurant(personSchema, LineID, restaurant):
-    # condition = {'LineID': LineID}
-    # user = personSchema.find_one(condition)
-    # restaurants = user['restaurants']
-    # restaurants.append(
-    #     {
-    #         "name": restaurant,
-    #         "menu": [],
+    condition = {'LineID': LineID}
+    user = personSchema.find_one(condition)
+    restaurants = user['restaurants']
+    restaurants.append(
+        {
+            "name": restaurant,
+            "menu": [],
             
-    #     }
-    # )
-    # val = {"$set": {'restaurants': restaurants}}
-    # personSchema.update_one(condition, val)
+        }
+    )
+    val = {"$set": {'restaurants': restaurants}}
+    personSchema.update_one(condition, val)
     return
 
 
