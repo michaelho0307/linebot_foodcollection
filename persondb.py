@@ -104,7 +104,7 @@ def get_resaurant(personSchema, LineID):
         restaurant_dict = {
             'name': name,
             'num': num,
-            'uri': f'https://www.google.com/search?q={name}'
+            'uri': f'https://www.google.com/'
         }
         restaurant_list.append(restaurant_dict)
     return restaurant_list
