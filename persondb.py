@@ -40,6 +40,7 @@ personSchema = {
 }
 '''
 
+
 def userInfoInit(personSchema, LineID):
     userInfo = {
         'LineID': LineID,
@@ -54,8 +55,9 @@ def userInfoInit(personSchema, LineID):
     personSchema.insert_one(userInfo)
     return True
 
+
 def getUser(personSchema, LineID):
-    condition = { 'LineID': LineID }
+    condition = {'LineID': LineID}
     user = personSchema.find_one(condition)
     if user is None:
         userInfoInit(personSchema, LineID)
@@ -63,20 +65,22 @@ def getUser(personSchema, LineID):
 
 #getUser(personSchema, LineID)
 
+
 restaurant_info = {
     'name': '食堂1',
     'index': 0,
     'menu': [
         {
             'item': 'food1',
-            'price': 10, 
+            'price': 10,
         },
         {
             'item': 'food2',
-            'price': 20, 
+            'price': 20,
         }
     ]
 }
+
 
 def update_restaurant(personSchema, LineID, restaurant_info):
     condition = {'LineID': LineID}
@@ -84,9 +88,8 @@ def update_restaurant(personSchema, LineID, restaurant_info):
     restaurants = user['restaurants']
     restaurants.append(restaurant_info)
     val = {"$set": {'restaurants': restaurants}}
-    personSchema.update_one(condition,val)
+    personSchema.update_one(condition, val)
     return
-
 
 
 def get_resaurant(personSchema, LineID):
@@ -126,9 +129,10 @@ def get_favorite(personSchema, LineID):
             restaurant_list.append(restaurnt_dict)
     return restaurant_list
 
+
 def get_random_restaurant(personSchema, LineID):
     # return a random restaurant' s name -> string
-    condition = {'LineID':LineID}
+    condition = {'LineID': LineID}
     user = personSchema.find_one(condition)
     restaurnts = user['restaurants']
     index = random.randint(0, len(restaurnts)-1)
@@ -143,21 +147,24 @@ def get_day_interval(str1, str2):
     return num
 
 # three choices: now, week, month
+
+
 def get_specific_time_order(personSchema, LineID, interval):
     condition = {'LineID': LineID}
     user = personSchema.find_one(condition)
     history = user['history']
     time = datetime.datetime.now()
     order_list = []
-    time_interval = 7 if interval=='WEEk' else 30
+    time_interval = 7 if interval == 'WEEk' else 30
 
     if interval == 'NOW':
-        return history[-1]    
+        return history[-1]
     else:
         for order in history:
             if get_day_interval(order['time'], time) <= time_interval:
                 order_list.append(order)
     return order_list
+
 
 def get_reminder(personSchema, LineID):
     condition = {'LineID': LineID}
@@ -166,13 +173,24 @@ def get_reminder(personSchema, LineID):
     return payment
 
 
-
 def add_restaurent(personSchema, LineID, restaurant):
-    pass
-    
+    condition = {'LineID': LineID}
+    user = personSchema.find_one(condition)
+    restaurants = user['restaurants']
+    restaurants.append(
+        {
+            "name": restaurant,
+            "menu": []
+        }
+    )
+    val = {"$set": {'restaurants': restaurants}}
+    personSchema.update_one(condition, val)
+    return
+
 
 def star_restaurant(personSchema, LineID, restaurant):
     pass
+
 
 def del_restaurant(personSchema, LineID, restaurant):
     pass

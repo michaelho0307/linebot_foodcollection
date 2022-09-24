@@ -49,7 +49,7 @@ def get_history():
 #    'price': int,
 # }
 def get_reminder(info):
-    restaurnt = info['restaurant']
+    restaurant = info['restaurant']
     name = info['name']
     price = info['price']
     msg = f'您有一筆來自{restaurant}的訂單，訂閱品項為{name}，消費金額一共是{price}元'
