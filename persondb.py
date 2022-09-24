@@ -173,7 +173,7 @@ def get_reminder(personSchema, LineID):
     return payment
 
 
-def add_restaurent(personSchema, LineID, restaurant):
+def add_restaurant(personSchema, LineID, restaurant):
     condition = {'LineID': LineID}
     user = personSchema.find_one(condition)
     restaurants = user['restaurants']
