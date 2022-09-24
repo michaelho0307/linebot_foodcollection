@@ -36,7 +36,7 @@ def get_menu_carousel(restaurant_list):
     content = FlexSendMessage(alt_text='查閱菜單', contents=carousel)
     print(content)
 
-    content = {
+    content = '''{
         "altText": "查閱菜單",
         "contents": {
             "contents": [
@@ -228,7 +228,7 @@ def get_menu_carousel(restaurant_list):
             "type": "carousel"
         },
         "type": "flex"
-    }
+    }'''
 
     return content
 
