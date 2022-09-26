@@ -137,9 +137,9 @@ def handle_postback(event):
 
         if re.match('ADD', msg):
             if persondb.add_restaurant(personSchema, uid, restaurant):
-                line_bot_api.push_message(uid, TextSendMessage("成功加入"))
+                line_bot_api.push_message(uid, TextSendMessage(f"成功加入{restaurant}"))
             else:
-                line_bot_api.push_message(uid, TextSendMessage("該餐廳已在清單中"))
+                line_bot_api.push_message(uid, TextSendMessage(f"{restaurant}已在清單中"))
 
         elif re.match('DEL', msg):
             persondb.del_restaurant(personSchema, uid, restaurant)
