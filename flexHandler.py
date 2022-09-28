@@ -76,7 +76,7 @@ def getFunctionList():
     content = FlexSendMessage(alt_text='功能列表', contents=template)
     return content
 
-def getOrderStatistic()
+def getOrderStatistic():
     template = json.load(open('./template/orderStatistic.json','r+',encoding='UTF-8'))
     content = FlexSendMessage(alt_text='訂餐統計', contents=template)
     return content
