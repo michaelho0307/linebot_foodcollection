@@ -118,8 +118,8 @@ def handle_message(event):
 
     # Group-related Development
     elif source_type == 'group':
-        gid = event.groupId
-        uid = event.user_id
+        #gid = event.groupId
+        #uid = event.user_id
         print(event)
 
 
@@ -128,7 +128,9 @@ def handle_message(event):
             line_bot_api.push_message(gid, content)
         
         elif re.match('@旋轉轉盤', msg):
-            pass
+            item = groupSchema.getRandomRestaurant(gid)
+            content = flexHandler.getRestaurantDecider(item)
+            line_bot_api.push_message(uid, content)
 
         elif re.match('@匯入餐廳', msg):
             pass
