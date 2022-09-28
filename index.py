@@ -12,16 +12,20 @@ import pymongo
 import os
 import re
 import certifi
-
+from dotenv import load_dotenv
 import flexHandler
 import persondb
 
 app = Flask(__name__)
 
+if os.environ.get("ChannelAccessToken") == None:
+    load_dotenv()
+
 # LINE BOT basic info
 line_bot_api = LineBotApi(os.environ["ChannelAccessToken"])
 handler = WebhookHandler(os.environ["ChannelSecret"])
-client = pymongo.MongoClient("mongodb+srv://michaelho:root@cluster0.kgvqwtd.mongodb.net/?retryWrites=true&w=majority",tlsCAFile=certifi.where())
+client = pymongo.MongoClient(
+    "mongodb+srv://michaelho:root@cluster0.kgvqwtd.mongodb.net/?retryWrites=true&w=majority", tlsCAFile=certifi.where())
 database = client['LinebotDB']
 personSchema = database['personSchema']
 groupSchema = database['groupSchema']
@@ -37,7 +41,6 @@ def callback():
     except InvalidSignatureError:
         abort(400)
     return 'OK'
-
 
 
 # Message Event
@@ -87,7 +90,7 @@ def handle_message(event):
 
         ### @查閱餐廳菜單：no message event.
 
-        ##### @新增菜單
+        # @新增菜單
         elif re.match('探索更多周邊美食', msg):
             pass
 
@@ -112,7 +115,6 @@ def handle_message(event):
             itemList = persondb.getSpecificTimeOrder(uid, 'NOW')
             content = flexHandler.checkOderRecord(itemList)
             line_bot_api.push_message(uid, content)
-        
 
     # Group-related Development
     elif source_type == 'group':

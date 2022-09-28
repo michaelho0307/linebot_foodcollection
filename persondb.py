@@ -122,6 +122,22 @@ def getSpecificTimeOrder(LineID, interval):
 
 
 
+def add_restaurant(personSchema, LineID, restaurant):
+    condition = {'LineID': LineID}
+    user = personSchema.find_one(condition)
+    restaurants = user.get('restaurants') if user.get('restaurants') else []
+    checker = [True for r in restaurants if r["name"] == restaurant]
+    if not any(checker):
+        restaurants.append(
+            {
+                "name": restaurant,
+                "menu": [],
+            }
+        )
+        val = {"$set": {'restaurants': restaurants}}
+        personSchema.update_one(condition, val)
+        return True
+    return False
 
     
 # Postback-Related
