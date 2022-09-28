@@ -120,9 +120,10 @@ def handle_message(event):
     elif source_type == 'group':
         #gid = event.groupId
         #uid = event.user_id
-        print(event.source)
-        gid = event['source']['groupId']
-        uid = event['source']['userId']
+        print(event.source.groupId)
+        print(event.source.userId)
+        gid = event.source.groupId
+        uid = event.source.userId
         
         if re.match('@功能列表', msg):
             content = flexHandler.getFunctionList()
