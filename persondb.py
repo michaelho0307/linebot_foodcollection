@@ -56,7 +56,7 @@ def getRestaurants(LineID) ->list:
         itemList.append(itemDict)
     return itemList
 
-def getStarRestaurantItems(starList):
+def getStarRestaurantItems(LineID, starList):
     user = checkUser(LineID)
     items = user['restaurants']
     itemList = []
@@ -111,6 +111,7 @@ def getTimeInterval(str1, str2):
 
 def getSpecificTimeOrder(LineID, interval):
     items = getHistory(LineID)
+    if len(items) == 0: return items
     time = datetime.datetime.now()
     itemList = []
     if interval == 'NOW': return items[-1]
