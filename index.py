@@ -62,7 +62,7 @@ def handle_message(event):
             content = flexHandler.getRestaurantItems(itemList) if len(itemList) else TextSendMessage('您目前沒有加入餐廳')
             line_bot_api.push_message(uid, content)
 
-        elif re.match("@新增菜單", msg): ##### add_menu
+        elif re.match("@新增餐廳", msg): ##### add_menu
             content = flexHandler.getAddRestaurant()
             line_bot_api.push_message(uid, content)
 
@@ -104,17 +104,17 @@ def handle_message(event):
         ##### @歷史訂單
         elif re.match('查看當月訂單',msg):
             itemList = persondb.getSpecificTimeOrder(uid, 'MONTH')
-            content = flexHandler.checkOderRecord(itemList)
+            content = flexHandler.checkOrderRecord(itemList)
             line_bot_api.push_message(uid,content)
 
         elif re.match('查看一周訂單', msg):
             itemList = persondb.getSpecificTimeOrder(uid, 'WEEK')
-            content = flexHandler.checkOderRecord(itemList)
+            content = flexHandler.checkOrderRecord(itemList)
             line_bot_api.push_message(uid,content)
 
         elif re.match('查看最新訂單', msg):
             itemList = persondb.getSpecificTimeOrder(uid, 'NOW')
-            content = flexHandler.checkOderRecord(itemList)
+            content = flexHandler.checkOrderRecord(itemList)
             line_bot_api.push_message(uid, content)
 
     # Group-related Development
@@ -167,7 +167,9 @@ def handle_postback(event):
             persondb.delFunc(uid, val)
 
     elif source_type == 'group':
-        pass
+        if re.match('SEND', msg):
+            content = flexHandler.getOrderStarter()
+            line_bot_api.push_message(uid, content)
 
 
 if __name__ == "__main__":
