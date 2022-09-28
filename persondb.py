@@ -94,7 +94,7 @@ def getPayment(LineID) ->list:
 def getStarList(LineID) ->list:
     user = checkUser(LineID)
     itemsList = user['star']
-    return itemList
+    return itemsList
 
 # History-Related
 

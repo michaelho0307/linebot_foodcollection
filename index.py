@@ -67,8 +67,8 @@ def handle_message(event):
 
         
         elif re.match("@應付金額及點餐提醒",msg): ##### reminder
-            itemDict = persondb.getPayment(uid)
-            content = flexHandler.getReminder(itemDict)
+            itemList = persondb.getPayment(uid)
+            content = flexHandler.getReminder(itemList)
             line_bot_api.push_message(uid, content)
         
         

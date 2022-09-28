@@ -38,6 +38,7 @@ def getRestaurantDecider(name):
     return content
 
 def getReminder(itemList):
+    if len(itemList)==0: return TextSendMessage('您目前尚無訂單')
     msg = '您有以下訂單'
     for item in itemList:
         restaurnt = itemList['restaurant']
@@ -49,7 +50,7 @@ def getReminder(itemList):
 
 def getOrderRecord():
     template = json.load(open('./template/restaurantDecider.json','r+',encoding='UTF-8'))
-    content = FlexSendMessage(alt_text='歷史訂單', contents=content)
+    content = FlexSendMessage(alt_text='歷史訂單', contents=template)
     return content
 
 def checkOrderRecord():
