@@ -1,0 +1,160 @@
+{
+    "type": "bubble",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "訂餐系統",
+          "color": "#FFFFFF",
+          "size": "lg",
+          "weight": "bold",
+          "align": "center"
+        }
+      ],
+      "backgroundColor": "#450020"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "燒牛肉河粉",
+              "color": "#450020"
+            },
+            {
+              "type": "text",
+              "text": "$ 150",
+              "color": "#450020"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "label": "點餐",
+                "data": "ORDER-餐點一",
+                "displayText": "點餐完成"
+              },
+              "height": "sm",
+              "style": "primary",
+              "color": "#CAC6F5"
+            }
+          ],
+          "alignItems": "center",
+          "margin": "xs"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "海鮮米線",
+              "color": "#450020"
+            },
+            {
+              "type": "text",
+              "text": "$ 130",
+              "color": "#450020"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "label": "點餐",
+                "data": "ORDER-餐點一",
+                "displayText": "點餐完成"
+              },
+              "height": "sm",
+              "style": "primary",
+              "color": "#CAC6F5"
+            }
+          ],
+          "alignItems": "center",
+          "margin": "md"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "鮭魚炒飯",
+              "color": "#450020"
+            },
+            {
+              "type": "text",
+              "text": "$ 120",
+              "color": "#450020"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "label": "點餐",
+                "data": "ORDER-餐點一",
+                "displayText": "點餐完成"
+              },
+              "height": "sm",
+              "style": "primary",
+              "color": "#CAC6F5"
+            }
+          ],
+          "alignItems": "center",
+          "margin": "md"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "牛肉炒飯",
+              "color": "#450020"
+            },
+            {
+              "type": "text",
+              "text": "$ 100",
+              "color": "#450020"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "postback",
+                "label": "點餐",
+                "data": "ORDER-餐點一",
+                "displayText": "點餐完成"
+              },
+              "height": "sm",
+              "style": "primary",
+              "color": "#CAC6F5"
+            }
+          ],
+          "alignItems": "center",
+          "margin": "md"
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "label": "點餐完畢",
+            "text": "點餐結束！"
+          },
+          "style": "primary",
+          "color": "#CF6052"
+        }
+      ]
+    }
+  }

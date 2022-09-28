@@ -141,13 +141,14 @@ def handle_message(event):
         
         elif re.match('@開始訂餐',msg):
             _ , name = msg.split('-')
+            print(name)
             content = flexHandler.getOrderStarter(name)
             line_bot_api.push_message(gid, content)
 
         elif re.match('@訂餐統計', msg):
             content = flexHandler.getOrderStatistic()
             line_bot_api.push_message(gid, content)
-        
+
 
 # Postback Event 
 @handler.add(PostbackEvent)

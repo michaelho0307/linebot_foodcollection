@@ -39,7 +39,6 @@ def checkGroup(gid):
         return groupSchema.find_one(condition)
     return group
 
-
 def getRandomRestaurant(gid) -> str:
     group = checkGroup(gid)
     items = group['restaurants']

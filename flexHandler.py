@@ -92,3 +92,8 @@ def getRestaurantChecker():
     template = json.load(open('./template/restaurantChecker.json','r+',encoding='UTF-8'))
     content = FlexSendMessage(alt_text='查閱餐廳', contents=template)
     return content
+
+def getOrderStarter():
+    template = json.load(open('./template/orderStart.json','r+',encoding='UTF-8'))
+    content = FlexSendMessage(alt_text='開始訂餐', contents=template)
+    return content
