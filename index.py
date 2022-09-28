@@ -74,7 +74,7 @@ def handle_message(event):
         
         elif re.match("@我的最愛", msg): ##### favorite
             starList = persondb.getStarList(uid)
-            itemList = persondb.getRestaurantFromIndex(starList)
+            itemList = persondb.getStarRestaurantItems(starList)
             content = flexHandler.getStarRestaurantItems(itemList) if len(itemList) else TextSendMessage(text='您目前沒有最愛餐廳')
             line_bot_api.push_message(uid, content)
 
