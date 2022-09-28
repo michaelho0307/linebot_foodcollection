@@ -59,7 +59,7 @@ def handle_message(event):
         ### default functionality
         if re.match("@查閱餐廳菜單" ,msg): ##### check_menu
             itemList = persondb.getRestaurants(uid)
-            content = flexHandler.getRestaurantItems(itemList) if len(itemList) else TextSendMessage(text='您目前沒有加入餐廳')
+            content = flexHandler.getRestaurantItems(itemList) if len(itemList) else TextSendMessage('您目前沒有加入餐廳')
             line_bot_api.push_message(uid, content)
 
         elif re.match("@新增菜單", msg): ##### add_menu
@@ -119,10 +119,6 @@ def handle_message(event):
 
     # Group-related Development
     elif source_type == 'group':
-        #gid = event.groupId
-        #uid = event.user_id
-        print(event.source.group_id)
-        print(event.source.user_id)
         gid = event.source.group_id
         uid = event.source.user_id
         
@@ -140,7 +136,7 @@ def handle_message(event):
             line_bot_api.push_message(uid, content)
 
         elif re.match('@查閱餐廳', msg):
-            line_bot_api.push_message(uid, TextSendMessage('Test'))
+            line_bot_api.push_message(gid, TextSendMessage('Test'))
         
         elif re.match('@開始訂餐',msg):
             _ , name = msg.split('-')
@@ -149,9 +145,8 @@ def handle_message(event):
 
         elif re.match('@訂餐統計', msg):
             content = flexHandler.getOrderStatistic()
-            line_bot_api.push_message(uid, content)
+            line_bot_api.push_message(gid, content)
         
-
 
 # Postback Event 
 @handler.add(PostbackEvent)

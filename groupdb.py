@@ -39,7 +39,7 @@ def checkGroup(gid):
 
 
 def getRandomRestaurant(gid) -> str:
-    group = checkGroup(LineID)
+    group = checkGroup(gid)
     items = group['restaurants']
     if len(items) == 0: return '群組沒有任何餐廳'
     index = random.randint(0, len(items)-1)
