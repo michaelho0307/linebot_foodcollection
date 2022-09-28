@@ -142,7 +142,9 @@ def handle_message(event):
             line_bot_api.push_message(uid, TextSendMessage('Test'))
         
         elif re.match('@開始訂餐',msg):
-            pass
+            _ , name = msg.split('-')
+            content = flexHandler.getOrderStarter(name)
+            line_bot_api.push_message(gid, content)
 
         elif re.match('@訂餐統計', msg):
             content = flexHandler.getOrderStatistic()

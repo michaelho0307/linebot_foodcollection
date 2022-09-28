@@ -15,10 +15,12 @@ def getRestaurantItem(name, num, uri):
     content[0]["action"]["data"] = f"STAR-{name}"
     return template
 
+
+
 def getRestaurantItems(itemList):
     items = []
     for item in itemList:
-        items.append(getMenuItem(item['name'], item['num'], item['uri']))
+        items.append(getRestaurantItem(item['name'], item['num'], item['uri']))
     carousel = {
         "type": "carousel",
         "contents": items
