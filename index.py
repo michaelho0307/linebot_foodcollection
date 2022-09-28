@@ -52,66 +52,65 @@ def handle_message(event):
         user_name = profile.display_name
         uid = profile.user_id
 
-        persondb.getUser(personSchema,uid)
-
         ### default functionality
         if re.match("@查閱餐廳菜單" ,msg): ##### check_menu
-            restaurant_list = persondb.get_resaurant(personSchema, uid)
-            content = flexHandler.get_menu_carousel(restaurant_list) if len(restaurant_list) else TextSendMessage(text='您目前沒有加入餐廳')
+            itemList = persondb.getRestaurants(uid)
+            content = flexHandler.getRestaurantItems(itemList) if len(itemList) else TextSendMessage(text='您目前沒有加入餐廳')
             line_bot_api.push_message(uid, content)
 
         elif re.match("@新增菜單", msg): ##### add_menu
-            content = flexHandler.get_add_menu()
+            content = flexHandler.getAddRestaurant()
             line_bot_api.push_message(uid, content)
 
         
         elif re.match("@應付金額及點餐提醒",msg): ##### reminder
-            info = persondb.get_reminder(personSchema, uid)
-            content = flexHandler.get_reminder(info)
+            itemDict = persondb.getPayment(uid)
+            content = flexHandler.getReminder(itemDict)
             line_bot_api.push_message(uid, content)
         
         
         elif re.match("@我的最愛", msg): ##### favorite
-            restaurant_list = persondb.get_favorite(personSchema, uid)
-            content = flexHandler.get_menu_carousel(restaurant_list) if len(restaurant_list) else TextSendMessage(text='您目前沒有最愛餐廳')
+            starList = persondb.getStarList(uid)
+            itemList = persondb.getRestaurantFromIndex(starList)
+            content = flexHandler.getStarRestaurantItems(itemList) if len(itemList) else TextSendMessage(text='您目前沒有最愛餐廳')
             line_bot_api.push_message(uid, content)
 
         elif re.match("@旋轉轉盤", msg): ##### carousel
-            restaurant_name = persondb.get_random_restaurant(personSchema, uid)
-            content = flexHandler.get_carousel(restaurant_name)
+            item = persondb.getRandomRestaurant(uid)
+            content = flexHandler.getRestaurantDecider(item)
             line_bot_api.push_message(uid, content)
         
         
         elif re.match("@歷史訂單",msg): ##### history
-            content = flexHandler.get_history(personSchema, uid)
+            content = flexHandler.getOrderRecord()
             line_bot_api.push_message(uid, content)
-        
+
+        ### @查閱餐廳菜單：no message event.
 
         ##### @新增菜單
         elif re.match('探索更多周邊美食', msg):
             pass
-        
-        elif re.match('自行加入餐廳',msg):
-            pass
 
-        elif re.match('查看餐廳列表', msg):
-            pass
+        ### @應付金額及點餐提醒
+
+        ### @我的最愛
         
+        ### @旋轉轉盤
         
         ##### @歷史訂單
         elif re.match('查看當月訂單',msg):
-            order_list = persondb.get_specific_time_order(personSchema, uid, 'MONTH')
-            content = flexHandler.check_order(order_list)
+            itemList = persondb.getSpecificTimeOrder(uid, 'MONTH')
+            content = flexHandler.checkOderRecord(itemList)
             line_bot_api.push_message(uid,content)
 
         elif re.match('查看一周訂單', msg):
-            order_list = persondb.get_specific_time_order(personSchema, uid, 'WEEK')
-            content = flexHandler.check_order(order_list)
+            itemList = persondb.getSpecificTimeOrder(uid, 'WEEK')
+            content = flexHandler.checkOderRecord(itemList)
             line_bot_api.push_message(uid,content)
 
         elif re.match('查看最新訂單', msg):
-            order_list = persondb.get_specific_time_order(personSchema, uid, 'NOW')
-            content = flexHandler.check_order(order_list)
+            itemList = persondb.getSpecificTimeOrder(uid, 'NOW')
+            content = flexHandler.checkOderRecord(itemList)
             line_bot_api.push_message(uid, content)
         
 
@@ -131,16 +130,10 @@ def handle_postback(event):
         user_name = profile.display_name
         uid = profile.user_id
         
-        _ , restaurant = msg.split('-')
+        key, val = msg.split('-')
 
-        if re.match('ADD',msg):
-            persondb.add_restaurant(personSchema, uid, restaurant)
-        
-        elif re.match('DEL', msg):
-            persondb.del_restaurant(personSchema, uid, restaurant)
-        
-        elif re.match('STAR', msg):
-            persondb.star_restaurant(personSchema, uid, restaurant)
+        if re.match('DEL', msg):
+            persondb.delFunc(uid, val)
 
     elif source_type == 'group':
         pass

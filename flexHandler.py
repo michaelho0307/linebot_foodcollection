@@ -1,68 +1,61 @@
 import json
 from linebot.models import FlexSendMessage, TextSendMessage
 
-def get_add_menu():
-    flexMessage = json.load(open('./template/add_menu.json','r+',encoding='UTF-8'))
-    content = FlexSendMessage(alt_text='新增菜單', contents=flexMessage)
-    return content
+def getRestaurantItem(name, num, uri):
+    template = json.load(open('./template/restaurantItem.json','r+',encoding='UTF-8'))
 
-def get_menu_bubble(name, num, uri):
-    bubble = json.load(open('./template/check_menu.json','r+',encoding='UTF-8'))
-    body_content = bubble["body"]["contents"]
-    body_content[1]["text"] = str(name)
-    body_content[2]["text"] = f'菜單數量共計：{num} 件'
-    body_content[4]["action"]["data"] = f'DEL-{name}'
-    body_content[5]["action"]["uri"] = uri #modify
-    body_content[6]["action"]["uri"] = uri #lookup
+    content = template["body"]["contents"]
+    content[1]["text"] = str(name)
+    content[2]["text"] = f'菜單數量共計：{num} 件'
+    content[4]["action"]["data"] = f'DEL-{name}'
+    content[5]["action"]["uri"] = uri #modify
+    content[6]["action"]["uri"] = uri #lookup
 
-    footer_content = bubble["footer"]["contents"]
-    footer_content[0]["action"]["data"] = f"STAR-{name}"
-    return bubble
+    content = template["footer"]["contents"]
+    content[0]["action"]["data"] = f"STAR-{name}"
+    return template
 
-def get_menu_carousel(restaurant_list):
-    restaurants = []
-    for restaurant in restaurant_list:
-        restaurants.append(get_menu_bubble(restaurant["name"], restaurant["num"], restaurant["uri"]))
+def getRestaurantItems(itemList):
+    items = []
+    for item in itemList:
+        items.append(getMenuItem(item['name'], item['num'], item['uri']))
     carousel = {
         "type": "carousel",
-        "contents": restaurants
+        "contents": items
     }
     content = FlexSendMessage(alt_text='查閱菜單', contents=carousel)
-    print(content)
     return content
 
-def get_carousel(name):
-    flexMessage = json.load(open('./template/carousel.json','r+',encoding='UTF-8'))
-    flexMessage["body"]["contents"][3]["contents"][1]["action"]["text"] = f'我要吃{name}'
-    print(flexMessage)
-    content = FlexSendMessage(alt_text='旋轉轉盤', contents=flexMessage)
+def getAddRestaurant():
+    template = json.load(open('./template/addRestaurant.json','r+',encoding='UTF-8'))
+    content = FlexSendMessage(alt_text='新增菜單', contents=template)
     return content
 
-def get_history():
-    flexMessage = json.load(open('./template/history.json','r+',encoding='UTF-8'))
-    content = FlexSendMessage(alt_text='歷史訂單', contents=flexMessage)
+def getRestaurantDecider(name):
+    template = json.load(open('./template/restaurantDecider.json','r+',encoding='UTF-8'))
+    template["body"]["contents"][3]["contents"][1]["action"]["text"] = name
+    content = FlexSendMessage(alt_text='旋轉轉盤', contents=template)
     return content
 
-# info = {
-#    'restaurant': string,
-#    'name': string,
-#    'price': int,
-# }
-def get_reminder(info):
-    restaurnt = info['restaurant']
-    name = info['name']
-    price = info['price']
+def getReminder(itemDict):
+    restaurnt = itemDict['restaurant']
+    name = itemDict['name']
+    price = itemDict['price']
     msg = f'您有一筆來自{restaurant}的訂單，訂閱品項為{name}，消費金額一共是{price}元'
     content = TextSendMessage(msg)
     return content
 
-
-def check_order(order_list):
-    msg = '以下是您的訂單紀錄\n'
-    for order in order_list:
-        restaurant = order['restaurant']
-        name = order['name']
-        price = order['price']
-        msg += f'{restaurant} 餐廳的 {name} 一共是 {price} 元\n'
-    content = TextSendMessage(msg)
+def getOrderRecord():
+    template = json.load(open('./template/restaurantDecider.json','r+',encoding='UTF-8'))
+    content = FlexSendMessage(alt_text='歷史訂單', contents=content)
     return content
+
+def checkOrderRecord():
+    pass
+
+def getStarRestaurantItem(name, num, uri):
+    pass
+
+def getStarRestaurantItems(itemList):
+    pass
+

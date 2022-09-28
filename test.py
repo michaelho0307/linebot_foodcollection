@@ -1,11 +1,26 @@
-import datetime
-def get_day_interval(str1, str2):
-    date1 = datetime.datetime.strptime(str1[0:10], "%Y-%m-%d")
-    date2 = datetime.datetime.strptime(str2[0:10], "%Y-%m-%d")
-    num = (date1 - date2).days
-    return num
+schema = {
+    'ID': 1234,
+    'creator': ['A_', '_B', '_C'],
+    'root': {
+        'chain': 'tezos'.
+        'tokenID': 1023
+    }
+    mapping: {
+        'A': 1022,
+        'B': 1021,
+        'C': 2038,
+        'D': 4038,
+        'E': 1920,
+    }
+}
 
+# NFT, fakeNFT -> 1234
 
-str1 = '2022-09-01 15:57:13.522721'
-str2 = '2022-09-10 15:57:13.522721'
-print(get_day_interval(str2, str1))
+root = {
+    'tezos': [
+        {
+            'tokenID': 1023,
+            'ID': 1234
+        }
+    ]
+}
