@@ -118,12 +118,10 @@ def handle_message(event):
 
     # Group-related Development
     elif source_type == 'group':
-        print(event.source)
-        #summary = line_bot_api.get_group_summary(event.source.group_id)
-        #gid = summary.group_id
-        #ids = line_bot_api.get_group_member_ids(gid)
-        #print(gid)
-        #print(ids)
+        summary = line_bot_api.get_group_summary(event.source.groupId)
+        gid = summary.group_id
+        
+
 
         if re.match('@功能列表', msg):
             pass
