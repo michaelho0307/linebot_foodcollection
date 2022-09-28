@@ -136,7 +136,8 @@ def handle_message(event):
             line_bot_api.push_message(uid, content)
 
         elif re.match('@查閱餐廳', msg):
-            line_bot_api.push_message(gid, TextSendMessage('Test'))
+            content = flexHandler.getRestaurantChecker()
+            line_bot_api.push_message(gid, content)
         
         elif re.match('@開始訂餐',msg):
             _ , name = msg.split('-')

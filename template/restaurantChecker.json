@@ -1,0 +1,123 @@
+{
+    "type": "bubble",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "查閱餐廳",
+          "size": "lg",
+          "weight": "bold",
+          "align": "center",
+          "color": "#FFFFFF"
+        }
+      ],
+      "backgroundColor": "#B892FF"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "請問今天想吃哪一間餐廳呢",
+          "color": "#450020",
+          "align": "center"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "阿孟河粉"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "查閱",
+                "uri": "https://liff.line.me/1657460100-1qv3lDzW"
+              },
+              "color": "#B892FF"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "點餐",
+                "text": "@開始點餐-阿孟河粉"
+              },
+              "style": "primary",
+              "color": "#CAC6F5"
+            }
+          ],
+          "alignItems": "center",
+          "margin": "md"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "二八麵館"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "查閱",
+                "uri": "https://liff.line.me/1657460100-1qv3lDzW"
+              },
+              "color": "#B892FF"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "點餐",
+                "text": "@開始點餐-二八麵館"
+              },
+              "color": "#CAC5F5",
+              "style": "primary"
+            }
+          ],
+          "alignItems": "center",
+          "margin": "sm"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "赤神豬排"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "查閱",
+                "uri": "https://liff.line.me/1657460100-1qv3lDzW"
+              },
+              "color": "#B892FF"
+            },
+            {
+              "type": "button",
+              "action": {
+                "type": "message",
+                "label": "點餐",
+                "text": "@開始點餐-赤神豬排"
+              },
+              "color": "#CAC5F5",
+              "style": "primary"
+            }
+          ],
+          "alignItems": "center",
+          "margin": "sm"
+        }
+      ]
+    }
+  }

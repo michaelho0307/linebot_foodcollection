@@ -12,6 +12,7 @@ from linebot.models import (
 
 
 ### remember to change
+line_bot_api = LineBotApi(os.environ["ChannelAccessToken"])
 client = pymongo.MongoClient("mongodb+srv://michaelho:root@cluster0.kgvqwtd.mongodb.net/?retryWrites=true&w=majority",tlsCAFile=certifi.where())
 database = client['LinebotDB']
 
