@@ -118,12 +118,30 @@ def handle_message(event):
 
     # Group-related Development
     elif source_type == 'group':
-        summary = line_bot_api.get_group_summary(event.source.group_id)
-        gid = summary.group_id
-        ids = line_bot_api.get_group_member_ids(gid)
-        print(gid)
-        print(ids)
+        print(event.source)
+        #summary = line_bot_api.get_group_summary(event.source.group_id)
+        #gid = summary.group_id
+        #ids = line_bot_api.get_group_member_ids(gid)
+        #print(gid)
+        #print(ids)
 
+        if re.match('@功能列表', msg):
+            pass
+        
+        elif re.match('@旋轉轉盤', msg):
+            pass
+
+        elif re.match('@匯入餐廳', msg):
+            pass
+
+        elif re.match('@查閱餐廳', msg):
+            pass
+        
+        elif re.match('@開始訂餐',msg):
+            pass
+
+        elif re.match('@訂餐統計', msg):
+            pass
         
 
 
