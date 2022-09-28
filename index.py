@@ -118,7 +118,13 @@ def handle_message(event):
 
     # Group-related Development
     elif source_type == 'group':
-        pass
+        summary = line_bot_api.get_group_summary(event.source.group_id)
+        gid = summary.group_id
+        ids = line_bot_api.get_group_member_ids(group_id)
+        print(gid)
+        print(ids)
+
+        
 
 
 # Postback Event
