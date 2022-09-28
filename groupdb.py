@@ -29,8 +29,6 @@ def groupInfoInit(gid):
     groupSchema.insert_one(groupInfo)
     return True
 
-
-
 def checkGroup(gid):
     condition = {'groupID': gid}
     group = groupSchema.find_one(condition)
@@ -39,3 +37,5 @@ def checkGroup(gid):
         return groupSchema.find_one(condition)
     return group
 
+
+    

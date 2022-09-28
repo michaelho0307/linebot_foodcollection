@@ -1,0 +1,85 @@
+{
+    "type": "bubble",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "功能列表",
+          "size": "lg",
+          "weight": "bold",
+          "align": "center"
+        }
+      ],
+      "height": "60px",
+      "backgroundColor": "#CAC6F5"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "text": "@旋轉轉盤",
+            "label": "旋轉轉盤"
+          },
+          "height": "sm",
+          "color": "#450020"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "label": "匯入餐廳",
+            "text": "@匯入餐廳"
+          },
+          "height": "sm",
+          "color": "#450020"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "label": "查閱餐廳",
+            "text": "@查閱餐廳"
+          },
+          "height": "sm",
+          "color": "#450020"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "label": "決定餐廳",
+            "text": "@決定餐廳"
+          },
+          "height": "sm",
+          "color": "#450020"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "label": "開始訂餐",
+            "text": "@開始訂餐"
+          },
+          "height": "sm",
+          "color": "#450020"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "label": "訂餐統計",
+            "text": "@訂餐統計"
+          },
+          "height": "sm",
+          "style": "primary",
+          "color": "#B892FF"
+        }
+      ]
+    }
+  }

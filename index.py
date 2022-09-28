@@ -124,7 +124,8 @@ def handle_message(event):
 
 
         if re.match('@功能列表', msg):
-            pass
+            content = flexHandler.getFunctionList()
+            line_bot_api.push_message(gid, content)
         
         elif re.match('@旋轉轉盤', msg):
             pass

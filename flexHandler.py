@@ -69,3 +69,9 @@ def getStarRestaurantItem(name, num, uri):
 def getStarRestaurantItems(itemList):
     pass
 
+
+### ============== group functionality ================ ###
+def getFunctionList():
+    template = json.load(open('./template/functionList.json','r+',encoding='UTF-8'))
+    content = FlexSendMessage(alt_text='功能列表', contents=template)
+    return content
