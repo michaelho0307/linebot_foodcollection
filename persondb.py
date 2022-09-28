@@ -84,7 +84,7 @@ def getRandomRestaurant(LineID) -> str:
 
 # Payment-Related
 
-def getPayment(LineID) ->dict:
+def getPayment(LineID) ->list:
     user = checkUser(LineID)
     content = user['payment']
     return content

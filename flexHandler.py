@@ -37,11 +37,13 @@ def getRestaurantDecider(name):
     content = FlexSendMessage(alt_text='旋轉轉盤', contents=template)
     return content
 
-def getReminder(itemDict):
-    restaurnt = itemDict['restaurant']
-    name = itemDict['name']
-    price = itemDict['price']
-    msg = f'您有一筆來自{restaurant}的訂單，訂閱品項為{name}，消費金額一共是{price}元'
+def getReminder(itemList):
+    msg = '您有以下訂單'
+    for item in itemList:
+        restaurnt = itemList['restaurant']
+        name = itemList['name']
+        price = itemList['price']
+        msg += f'來自{restaurant}的訂單，訂閱品項為{name}，消費金額一共是{price}元\n'
     content = TextSendMessage(msg)
     return content
 
