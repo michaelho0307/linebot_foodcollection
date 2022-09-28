@@ -49,7 +49,7 @@ def getReminder(itemList):
     return content
 
 def getOrderRecord():
-    template = json.load(open('./template/restaurantDecider.json','r+',encoding='UTF-8'))
+    template = json.load(open('./template/orderRecord.json','r+',encoding='UTF-8'))
     content = FlexSendMessage(alt_text='歷史訂單', contents=template)
     return content
 
