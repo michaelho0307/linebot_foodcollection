@@ -15,6 +15,7 @@ import certifi
 from dotenv import load_dotenv
 import flexHandler
 import persondb
+import groupdb
 
 app = Flask(__name__)
 
@@ -130,7 +131,7 @@ def handle_message(event):
             line_bot_api.push_message(gid, content)
         
         elif re.match('@旋轉轉盤', msg):
-            item = groupSchema.getRandomRestaurant(gid)
+            item = groupdb.getRandomRestaurant(gid)
             content = flexHandler.getRestaurantDecider(item)
             line_bot_api.push_message(gid, content)
 
