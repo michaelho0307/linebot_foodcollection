@@ -1,493 +1,493 @@
 {
-    "type": "carousel",
-    "contents": [
-      {
-        "type": "bubble",
-        "size": "kilo",
-        "hero": {
-          "type": "image",
-          "url": "https://pic.pimg.tw/shinyban/1592961142-1838453848_l.jpg",
-          "size": "full",
-          "aspectMode": "cover",
-          "aspectRatio": "320:213"
-        },
-        "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "稻咖哩",
-              "weight": "bold",
-              "size": "lg",
-              "wrap": true
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "spacing": "none",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "距離",
-                      "size": "md",
-                      "flex": 2
-                    },
-                    {
-                      "type": "text",
-                      "text": "12km 300m",
-                      "flex": 4
-                    }
-                  ],
-                  "margin": "none"
-                },
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "類型",
-                      "flex": 2,
-                      "size": "md"
-                    },
-                    {
-                      "type": "text",
-                      "text": "日式咖哩",
-                      "flex": 4
-                    }
-                  ],
-                  "margin": "xs"
-                },
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "推薦指數",
-                      "flex": 2
-                    },
-                    {
-                      "type": "text",
-                      "text": "4.8 顆星",
-                      "flex": 4
-                    }
-                  ],
-                  "margin": "xs"
-                }
-              ]
-            },
-            {
-              "type": "separator",
-              "margin": "lg"
-            }
-          ],
-          "spacing": "sm",
-          "paddingAll": "13px"
-        },
-        "footer": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "button",
-              "action": {
-                "type": "uri",
-                "label": "查看更多",
-                "uri": "https://www.facebook.com/webber827/"
-              },
-              "height": "sm"
-            },
-            {
-              "type": "button",
-              "action": {
-                "type": "postback",
-                "label": "加入餐廳",
-                "data": "ADD-稻咖哩",
-                "displayText": "加入該餐廳"
-              },
-              "height": "sm",
-              "style": "primary",
-              "color": "#B892FF"
-            }
-          ],
-          "paddingTop": "xs"
-        },
-        "styles": {
-          "body": {
-            "separator": true
-          }
-        }
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "size": "kilo",
+      "hero": {
+        "type": "image",
+        "url": "https://pic.pimg.tw/shinyban/1592961142-1838453848_l.jpg",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
       },
-      {
-        "type": "bubble",
-        "size": "kilo",
-        "hero": {
-          "type": "image",
-          "url": "https://i2.wp.com/aniseblog.tw/wp-content/uploads/2015/11/1491022611-58e8abde0156b8b90524391601298800.jpg?w=620&ssl=1",
-          "size": "full",
-          "aspectMode": "cover",
-          "aspectRatio": "320:213"
-        },
-        "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "鳳城燒臘",
-              "weight": "bold",
-              "size": "lg",
-              "wrap": true
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "spacing": "none",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "距離",
-                      "size": "md",
-                      "flex": 2
-                    },
-                    {
-                      "type": "text",
-                      "text": "5km 200m",
-                      "flex": 4
-                    }
-                  ],
-                  "margin": "none"
-                },
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "類型",
-                      "flex": 2,
-                      "size": "md"
-                    },
-                    {
-                      "type": "text",
-                      "text": "粵式燒臘",
-                      "flex": 4
-                    }
-                  ],
-                  "margin": "xs"
-                },
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "推薦指數",
-                      "flex": 2
-                    },
-                    {
-                      "type": "text",
-                      "text": "4.5 顆星",
-                      "flex": 4
-                    }
-                  ],
-                  "margin": "xs"
-                }
-              ]
-            },
-            {
-              "type": "separator",
-              "margin": "lg"
-            }
-          ],
-          "spacing": "sm",
-          "paddingAll": "13px"
-        },
-        "footer": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "button",
-              "action": {
-                "type": "uri",
-                "label": "查看更多",
-                "uri": "https://www.fengchengno1.com/"
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "稻咖哩",
+            "weight": "bold",
+            "size": "lg",
+            "wrap": true
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "none",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "距離",
+                    "size": "md",
+                    "flex": 2
+                  },
+                  {
+                    "type": "text",
+                    "text": "12km 300m",
+                    "flex": 4
+                  }
+                ],
+                "margin": "none"
               },
-              "height": "sm"
-            },
-            {
-              "type": "button",
-              "action": {
-                "type": "postback",
-                "label": "加入餐廳",
-                "data": "ADD-鳳城燒臘",
-                "displayText": "加入該餐廳"
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "類型",
+                    "flex": 2,
+                    "size": "md"
+                  },
+                  {
+                    "type": "text",
+                    "text": "日式咖哩",
+                    "flex": 4
+                  }
+                ],
+                "margin": "xs"
               },
-              "height": "sm",
-              "style": "primary",
-              "color": "#B892FF"
-            }
-          ],
-          "paddingTop": "xs"
-        },
-        "styles": {
-          "body": {
-            "separator": true
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "推薦指數",
+                    "flex": 2
+                  },
+                  {
+                    "type": "text",
+                    "text": "4.8 顆星",
+                    "flex": 4
+                  }
+                ],
+                "margin": "xs"
+              }
+            ]
+          },
+          {
+            "type": "separator",
+            "margin": "lg"
           }
-        }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
       },
-      {
-        "type": "bubble",
-        "size": "kilo",
-        "hero": {
-          "type": "image",
-          "url": "https://lh3.googleusercontent.com/nwLNn5Wupaw18ElXAL0v4enatDr-4yeTcU5KbIaRqE0Zh6BhS40w9Ed_r8P9bXw-hsfuWpVab0J2v-khrFYvV-IYdOK0bHKdK616b8Ld2teZ=s600",
-          "size": "full",
-          "aspectMode": "cover",
-          "aspectRatio": "320:213"
-        },
-        "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "邦食堂",
-              "weight": "bold",
-              "size": "lg",
-              "wrap": true
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "查看更多",
+              "uri": "https://www.facebook.com/webber827/"
             },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "spacing": "none",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "距離",
-                      "size": "md",
-                      "flex": 2
-                    },
-                    {
-                      "type": "text",
-                      "text": "7km 150m",
-                      "flex": 4
-                    }
-                  ],
-                  "margin": "none"
-                },
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "類型",
-                      "flex": 2,
-                      "size": "md"
-                    },
-                    {
-                      "type": "text",
-                      "text": "日式丼飯",
-                      "flex": 4
-                    }
-                  ],
-                  "margin": "xs"
-                },
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "推薦指數",
-                      "flex": 2
-                    },
-                    {
-                      "type": "text",
-                      "text": "4.7 顆星",
-                      "flex": 4
-                    }
-                  ],
-                  "margin": "xs"
-                }
-              ]
+            "height": "sm"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "加入餐廳",
+              "data": "ADD-稻咖哩",
+              "displayText": "加入該餐廳"
             },
-            {
-              "type": "separator",
-              "margin": "lg"
-            }
-          ],
-          "spacing": "sm",
-          "paddingAll": "13px"
-        },
-        "footer": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "button",
-              "action": {
-                "type": "uri",
-                "label": "查看更多",
-                "uri": "https://www.facebook.com/banfoodplace/"
-              },
-              "height": "sm"
-            },
-            {
-              "type": "button",
-              "action": {
-                "type": "postback",
-                "label": "加入餐廳",
-                "data": "ADD-邦食堂",
-                "displayText": "加入該餐廳"
-              },
-              "height": "sm",
-              "style": "primary",
-              "color": "#B892FF"
-            }
-          ],
-          "paddingTop": "xs"
-        },
-        "styles": {
-          "body": {
-            "separator": true
+            "height": "sm",
+            "style": "primary",
+            "color": "#B892FF"
           }
-        }
+        ],
+        "paddingTop": "xs"
       },
-      {
-        "type": "bubble",
-        "size": "kilo",
-        "direction": "ltr",
-        "hero": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "更多選擇",
-              "align": "center",
-              "size": "xl",
-              "margin": "xl",
-              "weight": "bold",
-              "style": "normal",
-              "color": "#FFFFFF"
-            },
-            {
-              "type": "separator",
-              "margin": "sm"
-            }
-          ],
-          "backgroundColor": "#B892FF"
-        },
+      "styles": {
         "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "找餐廳",
-              "weight": "bold"
-            },
-            {
-              "type": "text",
-              "text": "覺得前面推薦的餐廳太少，想要更多選項嗎？或是已經有想要加入的餐廳了呢？",
-              "wrap": true,
-              "offsetBottom": "md",
-              "margin": "md"
-            },
-            {
-              "type": "separator",
-              "margin": "md"
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "想要繼續探索周邊美食",
-                  "color": "#000000",
-                  "style": "normal",
-                  "margin": "xs"
-                },
-                {
-                  "type": "button",
-                  "action": {
-                    "type": "message",
-                    "label": "探索更多",
-                    "text": "探索更多周邊美食"
-                  },
-                  "height": "sm",
-                  "color": "#CAC6F5",
-                  "style": "primary",
-                  "margin": "md"
-                }
-              ],
-              "margin": "md"
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "我有想要自行加入餐廳"
-                },
-                {
-                  "type": "button",
-                  "action": {
-                    "type": "message",
-                    "label": "自行加入",
-                    "text": "自行加入餐廳"
-                  },
-                  "height": "sm",
-                  "style": "primary",
-                  "color": "#CAC6F5",
-                  "margin": "md"
-                }
-              ],
-              "margin": "md"
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "太糊塗忘記自己的列表"
-                },
-                {
-                  "type": "button",
-                  "action": {
-                    "type": "message",
-                    "label": "查看列表",
-                    "text": "查看我的餐廳列表"
-                  },
-                  "height": "sm",
-                  "style": "primary",
-                  "color": "#CAC6F5",
-                  "margin": "md"
-                }
-              ]
-            }
-          ]
+          "separator": true
         }
       }
-    ]
-  }
+    },
+    {
+      "type": "bubble",
+      "size": "kilo",
+      "hero": {
+        "type": "image",
+        "url": "https://i2.wp.com/aniseblog.tw/wp-content/uploads/2015/11/1491022611-58e8abde0156b8b90524391601298800.jpg?w=620&ssl=1",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "鳳城燒臘",
+            "weight": "bold",
+            "size": "lg",
+            "wrap": true
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "none",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "距離",
+                    "size": "md",
+                    "flex": 2
+                  },
+                  {
+                    "type": "text",
+                    "text": "5km 200m",
+                    "flex": 4
+                  }
+                ],
+                "margin": "none"
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "類型",
+                    "flex": 2,
+                    "size": "md"
+                  },
+                  {
+                    "type": "text",
+                    "text": "粵式燒臘",
+                    "flex": 4
+                  }
+                ],
+                "margin": "xs"
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "推薦指數",
+                    "flex": 2
+                  },
+                  {
+                    "type": "text",
+                    "text": "4.5 顆星",
+                    "flex": 4
+                  }
+                ],
+                "margin": "xs"
+              }
+            ]
+          },
+          {
+            "type": "separator",
+            "margin": "lg"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "查看更多",
+              "uri": "https://www.fengchengno1.com/"
+            },
+            "height": "sm"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "加入餐廳",
+              "data": "ADD-鳳城燒臘",
+              "displayText": "加入該餐廳"
+            },
+            "height": "sm",
+            "style": "primary",
+            "color": "#B892FF"
+          }
+        ],
+        "paddingTop": "xs"
+      },
+      "styles": {
+        "body": {
+          "separator": true
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "kilo",
+      "hero": {
+        "type": "image",
+        "url": "https://lh3.googleusercontent.com/nwLNn5Wupaw18ElXAL0v4enatDr-4yeTcU5KbIaRqE0Zh6BhS40w9Ed_r8P9bXw-hsfuWpVab0J2v-khrFYvV-IYdOK0bHKdK616b8Ld2teZ=s600",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "320:213"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "邦食堂",
+            "weight": "bold",
+            "size": "lg",
+            "wrap": true
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "none",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "距離",
+                    "size": "md",
+                    "flex": 2
+                  },
+                  {
+                    "type": "text",
+                    "text": "7km 150m",
+                    "flex": 4
+                  }
+                ],
+                "margin": "none"
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "類型",
+                    "flex": 2,
+                    "size": "md"
+                  },
+                  {
+                    "type": "text",
+                    "text": "日式丼飯",
+                    "flex": 4
+                  }
+                ],
+                "margin": "xs"
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "推薦指數",
+                    "flex": 2
+                  },
+                  {
+                    "type": "text",
+                    "text": "4.7 顆星",
+                    "flex": 4
+                  }
+                ],
+                "margin": "xs"
+              }
+            ]
+          },
+          {
+            "type": "separator",
+            "margin": "lg"
+          }
+        ],
+        "spacing": "sm",
+        "paddingAll": "13px"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "查看更多",
+              "uri": "https://www.facebook.com/banfoodplace/"
+            },
+            "height": "sm"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "加入餐廳",
+              "data": "ADD-邦食堂",
+              "displayText": "加入該餐廳"
+            },
+            "height": "sm",
+            "style": "primary",
+            "color": "#B892FF"
+          }
+        ],
+        "paddingTop": "xs"
+      },
+      "styles": {
+        "body": {
+          "separator": true
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "size": "kilo",
+      "direction": "ltr",
+      "hero": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "更多選擇",
+            "align": "center",
+            "size": "xl",
+            "margin": "xl",
+            "weight": "bold",
+            "style": "normal",
+            "color": "#FFFFFF"
+          },
+          {
+            "type": "separator",
+            "margin": "sm"
+          }
+        ],
+        "backgroundColor": "#B892FF"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "找餐廳",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "覺得前面推薦的餐廳太少，想要更多選項嗎？或是已經有想要加入的餐廳了呢？",
+            "wrap": true,
+            "offsetBottom": "md",
+            "margin": "md"
+          },
+          {
+            "type": "separator",
+            "margin": "md"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "想要繼續探索周邊美食",
+                "color": "#000000",
+                "style": "normal",
+                "margin": "xs"
+              },
+              {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "探索更多",
+                  "text": "探索更多周邊美食"
+                },
+                "height": "sm",
+                "color": "#CAC6F5",
+                "style": "primary",
+                "margin": "md"
+              }
+            ],
+            "margin": "md"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "我有想要自行加入餐廳"
+              },
+              {
+                "type": "button",
+                "action": {
+                  "type": "uri",
+                  "label": "自行加入",
+                  "uri": "https://liff.line.me/1657460100-1qv3lDzW"
+                },
+                "height": "sm",
+                "style": "primary",
+                "color": "#CAC6F5",
+                "margin": "md"
+              }
+            ],
+            "margin": "md"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "太糊塗忘記自己的列表"
+              },
+              {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "查看列表",
+                  "text": "查看我的餐廳列表"
+                },
+                "height": "sm",
+                "style": "primary",
+                "color": "#CAC6F5",
+                "margin": "md"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,92 +1,92 @@
 {
-    "type": "bubble",
-    "body": {
-      "type": "box",
-      "layout": "vertical",
-      "contents": [
-        {
-          "type": "text",
-          "text": "Restaurant",
-          "weight": "bold",
-          "color": "#00B616",
-          "size": "sm"
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Restaurant",
+        "weight": "bold",
+        "color": "#00B616",
+        "size": "sm"
+      },
+      {
+        "type": "text",
+        "text": "七里亭",
+        "weight": "bold",
+        "size": "xxl",
+        "margin": "md"
+      },
+      {
+        "type": "text",
+        "text": "菜單數量共計：12 件",
+        "size": "xs",
+        "color": "#aaaaaa",
+        "wrap": true
+      },
+      {
+        "type": "separator",
+        "margin": "xxl"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "postback",
+          "data": "七里亭",
+          "label": "刪除餐廳",
+          "displayText": "刪除餐廳！"
         },
-        {
-          "type": "text",
-          "text": "七里亭",
-          "weight": "bold",
-          "size": "xxl",
-          "margin": "md"
+        "height": "sm",
+        "color": "#450020"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "修改餐廳",
+          "uri": "https://liff.line.me/1657460100-1qv3lDzW"
         },
-        {
-          "type": "text",
-          "text": "菜單數量共計：12 件",
-          "size": "xs",
-          "color": "#aaaaaa",
-          "wrap": true
+        "height": "sm",
+        "color": "#450020"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "查看餐廳選項",
+          "uri": "https://liff.line.me/1657460100-1qv3lDzW"
         },
-        {
-          "type": "separator",
-          "margin": "xxl"
-        },
-        {
-          "type": "button",
-          "action": {
-            "type": "postback",
-            "data": "DEL-七里亭",
-            "label": "刪除餐廳",
-            "displayText": "刪除餐廳！"
-          },
-          "height": "sm",
-          "color": "#450020"
-        },
-        {
-          "type": "button",
-          "action": {
-            "type": "uri",
-            "label": "修改餐廳",
-            "uri": "http://linecorp.com/"
-          },
-          "height": "sm",
-          "color": "#450020"
-        },
-        {
-          "type": "button",
-          "action": {
-            "type": "uri",
-            "label": "查看餐廳選項",
-            "uri": "http://linecorp.com/"
-          },
-          "height": "sm",
-          "color": "#450020"
-        },
-        {
-          "type": "separator",
-          "margin": "md"
-        }
-      ]
-    },
-    "footer": {
-      "type": "box",
-      "layout": "vertical",
-      "contents": [
-        {
-          "type": "button",
-          "action": {
-            "type": "postback",
-            "label": "加入最愛",
-            "data": "STAR-七里亭",
-            "displayText": "加入最愛！"
-          },
-          "color": "#EF4E00",
-          "style": "primary",
-          "height": "sm"
-        }
-      ]
-    },
-    "styles": {
-      "body": {
-        "separator": false
+        "height": "sm",
+        "color": "#450020"
+      },
+      {
+        "type": "separator",
+        "margin": "md"
       }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "button",
+        "action": {
+          "type": "postback",
+          "label": "加入最愛",
+          "data": "七里亭",
+          "displayText": "加入最愛！"
+        },
+        "color": "#EF4E00",
+        "style": "primary",
+        "height": "sm"
+      }
+    ]
+  },
+  "styles": {
+    "body": {
+      "separator": false
     }
   }
+}

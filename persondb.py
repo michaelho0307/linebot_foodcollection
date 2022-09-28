@@ -81,7 +81,6 @@ def getRandomRestaurant(LineID) -> str:
     msg = '我要吃' + items[index]['name']
     return msg
 
-
 # Payment-Related
 
 def getPayment(LineID) ->list:
@@ -137,6 +136,7 @@ def add_restaurant(personSchema, LineID, restaurant):
         personSchema.update_one(condition, val)
         return True
     return False
+
 
     
 # Postback-Related
