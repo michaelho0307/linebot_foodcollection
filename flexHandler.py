@@ -75,3 +75,13 @@ def getFunctionList():
     template = json.load(open('./template/functionList.json','r+',encoding='UTF-8'))
     content = FlexSendMessage(alt_text='功能列表', contents=template)
     return content
+
+def getOrderStatistic()
+    template = json.load(open('./template/orderStatistic.json','r+',encoding='UTF-8'))
+    content = FlexSendMessage(alt_text='訂餐統計', contents=template)
+    return content
+
+def getRestaurantImporter(uid):
+    template = json.load(open('./template/restaurantImporter.json','r+',encoding='UTF-8'))
+    content = FlexSendMessage(alt_text='訂餐統計', contents=template)
+    return content
