@@ -118,8 +118,8 @@ def handle_message(event):
 
     # Group-related Development
     elif source_type == 'group':
-        gid = event.source.groupId
-        uid = event.source.user_id
+        gid = event.groupId
+        uid = event.user_id
         print(event)
 
 
