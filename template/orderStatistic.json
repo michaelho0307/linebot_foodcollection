@@ -1,0 +1,184 @@
+{
+    "type": "bubble",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "訂餐統計",
+          "size": "xl",
+          "weight": "bold",
+          "align": "center",
+          "color": "#FFFFFF"
+        }
+      ],
+      "backgroundColor": "#CAC6F5"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "餐廳名稱",
+              "weight": "bold"
+            },
+            {
+              "type": "text",
+              "text": "阿英滷肉飯"
+            }
+          ]
+        },
+        {
+          "type": "separator",
+          "margin": "md"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "餐點",
+              "weight": "bold"
+            },
+            {
+              "type": "text",
+              "text": "數量",
+              "weight": "bold"
+            },
+            {
+              "type": "text",
+              "text": "總價",
+              "weight": "bold"
+            }
+          ],
+          "margin": "md"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "滷肉飯"
+            },
+            {
+              "type": "text",
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "text": "120"
+            }
+          ],
+          "margin": "sm"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "餛飩麵"
+            },
+            {
+              "type": "text",
+              "text": "4"
+            },
+            {
+              "type": "text",
+              "text": "240"
+            }
+          ],
+          "margin": "sm"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "牛肉麵"
+            },
+            {
+              "type": "text",
+              "text": "2"
+            },
+            {
+              "type": "text",
+              "text": "200"
+            }
+          ],
+          "margin": "sm"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "燙青菜"
+            },
+            {
+              "type": "text",
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "text": "30"
+            }
+          ],
+          "margin": "sm"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "飲料"
+            },
+            {
+              "type": "text",
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "text": "32"
+            }
+          ],
+          "margin": "sm"
+        },
+        {
+          "type": "separator",
+          "margin": "md"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "總價",
+              "weight": "bold"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "text",
+              "text": "1782"
+            }
+          ],
+          "margin": "md"
+        }
+      ]
+    }
+  }

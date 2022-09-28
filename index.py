@@ -132,13 +132,14 @@ def handle_message(event):
         elif re.match('@旋轉轉盤', msg):
             item = groupSchema.getRandomRestaurant(gid)
             content = flexHandler.getRestaurantDecider(item)
-            line_bot_api.push_message(uid, content)
+            line_bot_api.push_message(gid, content)
 
         elif re.match('@匯入餐廳', msg):
-            pass
+            content = flexHandler.getRestaurantImporter(uid)
+            line_bot_api.push_message(uid, content)
 
         elif re.match('@查閱餐廳', msg):
-            pass
+            line_bot_api.push_message(uid, TextSendMessage('Test'))
         
         elif re.match('@開始訂餐',msg):
             pass
