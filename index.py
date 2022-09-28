@@ -167,9 +167,11 @@ def handle_postback(event):
             persondb.delFunc(uid, val)
 
     elif source_type == 'group':
+        gid = event.source.group_id
+        uid = event.source.user_id
         if re.match('SEND', msg):
             content = flexHandler.getOrderStarter()
-            line_bot_api.push_message(uid, content)
+            line_bot_api.push_message(gid, content)
 
 
 if __name__ == "__main__":
