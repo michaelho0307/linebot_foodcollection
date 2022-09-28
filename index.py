@@ -120,7 +120,7 @@ def handle_message(event):
     elif source_type == 'group':
         summary = line_bot_api.get_group_summary(event.source.group_id)
         gid = summary.group_id
-        ids = line_bot_api.get_group_member_ids(group_id)
+        ids = line_bot_api.get_group_member_ids(gid)
         print(gid)
         print(ids)
 
