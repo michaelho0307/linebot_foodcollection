@@ -2,6 +2,7 @@ import pymongo
 import random
 import datetime
 import certifi
+import os
 
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
