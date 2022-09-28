@@ -120,8 +120,6 @@ def getSpecificTimeOrder(LineID, interval):
     return itemList
     
 
-
-
 def add_restaurant(personSchema, LineID, restaurant):
     condition = {'LineID': LineID}
     user = personSchema.find_one(condition)

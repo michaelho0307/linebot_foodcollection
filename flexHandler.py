@@ -53,8 +53,15 @@ def getOrderRecord():
     content = FlexSendMessage(alt_text='歷史訂單', contents=template)
     return content
 
-def checkOrderRecord():
-    pass
+def checkOrderRecord(itemList):
+    if len(itemList) ==0: return TextSendMessage('您沒有歷史訂單')
+    msg = f'您在這段期間共有 {len(itemList)} 筆訂單\n'
+    for index, item in enumerate(itemList):
+        restaurant = item['name']
+        name = item['name']
+        price = item['price']
+        msg += f'{index}. 於{restaurant}訂購{name} 花費{price}\n'
+    return TextSendMessage(msg)
 
 def getStarRestaurantItem(name, num, uri):
     pass
