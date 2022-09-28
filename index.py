@@ -118,9 +118,9 @@ def handle_message(event):
 
     # Group-related Development
     elif source_type == 'group':
-        summary = line_bot_api.get_group_summary(event.source.groupId)
-        gid = summary.group_id
-        
+        gid = event.source.groupId
+        uid = event.source.user_id
+        print(event)
 
 
         if re.match('@功能列表', msg):
