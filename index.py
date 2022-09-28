@@ -122,7 +122,7 @@ def handle_message(event):
         gid = event.source.group_id
         uid = event.source.user_id
         
-        if re.match('@功能列表', msg):
+        if re.match('我餓了', msg):
             content = flexHandler.getFunctionList()
             line_bot_api.push_message(gid, content)
         

@@ -1,71 +1,71 @@
 {
-    "type": "bubble",
-    "header": {
-      "type": "box",
-      "layout": "vertical",
-      "contents": [
-        {
-          "type": "text",
-          "text": "匯入餐廳",
-          "size": "lg",
-          "weight": "bold",
-          "align": "center",
-          "color": "#FFFFFF"
-        }
-      ],
-      "backgroundColor": "#B892FF"
-    },
-    "body": {
-      "type": "box",
-      "layout": "vertical",
-      "contents": [
-        {
-          "type": "text",
-          "text": "選擇以下餐廳匯入到群組內吧！",
-          "color": "#CAC6F5",
-          "align": "center"
+  "type": "bubble",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "匯入餐廳",
+        "size": "lg",
+        "weight": "bold",
+        "align": "center",
+        "color": "#FFFFFF"
+      }
+    ],
+    "backgroundColor": "#B892FF"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "選擇以下餐廳匯入到群組內吧！",
+        "color": "#CAC6F5",
+        "align": "center"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "postback",
+          "label": "阿孟河粉",
+          "data": "IMPORT-阿孟河粉",
+          "displayText": "已加入群組清單中！"
         },
-        {
-          "type": "button",
-          "action": {
-            "type": "postback",
-            "label": "阿孟河粉",
-            "data": "IMPORT-阿孟河粉",
-            "displayText": "已加入群組清單中！"
-          },
-          "color": "#450020"
+        "color": "#450020"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "postback",
+          "label": "二八麵館",
+          "data": "IMPORT-二八麵館",
+          "displayText": "已加入群組清單中！"
         },
-        {
-          "type": "button",
-          "action": {
-            "type": "postback",
-            "label": "二八麵館",
-            "data": "IMPORT-二八麵館",
-            "displayText": "已加入群組清單中！"
-          },
-          "color": "#450020"
+        "color": "#450020"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "postback",
+          "label": "赤神豬排",
+          "data": "IMPORT-赤神豬排",
+          "displayText": "已加入群組清單中！"
         },
-        {
-          "type": "button",
-          "action": {
-            "type": "postback",
-            "label": "赤神豬排",
-            "data": "IMPORT-赤神豬排",
-            "displayText": "已加入群組清單中！"
-          },
-          "color": "#450020"
+        "color": "#450020"
+      },
+      {
+        "type": "button",
+        "color": "#450020",
+        "action": {
+          "type": "postback",
+          "data": "IMPORT-ALL",
+          "label": "全部匯入",
+          "displayText": "已加入群組清單中！"
         },
-        {
-          "type": "button",
-          "color": "#450020",
-          "action": {
-            "type": "postback",
-            "data": "IMPORT-ALL",
-            "label": "全部匯入",
-            "displayText": "已加入群組清單中！"
-          },
-          "style": "primary"
-        }
-      ]
-    }
+        "style": "primary"
+      }
+    ]
   }
+}

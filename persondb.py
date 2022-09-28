@@ -62,7 +62,9 @@ def getStarRestaurantItems(LineID, starList):
     items = user['restaurants']
     itemList = []
     for item in items:
-        if item['index'] in starList:
+        index = item['index']
+        print(index)
+        if index in starList:
             name =  item['name']
             num  =  len(item['menu'])
             #uri  =  f'https://www.google.com/search?q={name}&rlz=1C1CHBF_zh-TWTW904TW904&oq={name}&aqs=chrome.0.0i355i512j46i175i199i512j0i512j0i15i30l4.1712j0j15&sourceid=chrome&ie=UTF-8'
