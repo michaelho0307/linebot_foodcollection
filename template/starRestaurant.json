@@ -1,0 +1,78 @@
+{
+    "type": "bubble",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Restaurant",
+          "weight": "bold",
+          "color": "#00B616",
+          "size": "sm"
+        },
+        {
+          "type": "text",
+          "text": "阿孟河粉",
+          "weight": "bold",
+          "size": "xxl",
+          "margin": "md"
+        },
+        {
+          "type": "text",
+          "text": "菜單數量共計：12 件",
+          "size": "xs",
+          "color": "#aaaaaa",
+          "wrap": true
+        },
+        {
+          "type": "separator",
+          "margin": "xxl"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "修改餐廳",
+            "uri": "https://liff.line.me/1657460100-1qv3lDzW"
+          },
+          "height": "sm",
+          "color": "#450020",
+          "margin": "md"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "查看餐廳",
+            "uri": "https://liff.line.me/1657460100-1qv3lDzW"
+          },
+          "height": "sm",
+          "color": "#450020"
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "postback",
+            "label": "移除最愛",
+            "data": "七里亭",
+            "displayText": "已移除我的最愛"
+          },
+          "color": "#450020",
+          "style": "primary",
+          "height": "sm"
+        }
+      ]
+    },
+    "styles": {
+      "body": {
+        "separator": false
+      }
+    }
+  }
