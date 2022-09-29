@@ -48,7 +48,7 @@ def getRestaurants(LineID) ->list:
         name =  item['name']
         num  =  len(item['menu'])
         #uri  =  f'https://www.google.com/search?q={name}&rlz=1C1CHBF_zh-TWTW904TW904&oq={name}&aqs=chrome.0.0i355i512j46i175i199i512j0i512j0i15i30l4.1712j0j15&sourceid=chrome&ie=UTF-8'
-        uri = 'https://liff.line.me/1657460100-1qv3lDzW'
+        uri = 'https://liff.line.me/1657460100-1qv3lDzW/demo2'
         itemDict = {
             'name': name,
             'num': num,
