@@ -42,6 +42,9 @@ def checkGroup(gid):
     return group
 
 def getRandomRestaurant(gid) -> str:
+
+    return "我要吃阿孟河粉" # for demo purpose only
+
     group = checkGroup(gid)
     items = group['restaurants']
     if len(items) == 0: return '群組沒有任何餐廳'

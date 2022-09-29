@@ -38,7 +38,7 @@
             "action": {
               "type": "uri",
               "label": "查閱",
-              "uri": "http://linecorp.com/"
+              "uri": "https://liff.line.me/1657460100-1qv3lDzW/demo3"
             },
             "color": "#B892FF"
           },
@@ -70,7 +70,7 @@
             "action": {
               "type": "uri",
               "label": "查閱",
-              "uri": "http://linecorp.com/"
+              "uri": "https://liff.line.me/1657460100-1qv3lDzW/demo4"
             },
             "color": "#B892FF"
           },

@@ -40,6 +40,10 @@ def getRestaurantDecider(name):
     return content
 
 def getReminder(itemList):
+
+    # for demo purpose only
+    return TextSendMessage("應付金額 100 元\n提醒您 須在下午6點前完成點餐")
+
     if len(itemList)==0: return TextSendMessage('您目前尚無訂單')
     msg = '您有以下訂單'
     for item in itemList:
@@ -56,6 +60,10 @@ def getOrderRecord():
     return content
 
 def checkOrderRecord(itemList):
+
+    # for demo purpose only
+    return TextSendMessage("最新訂單：\n牛肉炒飯 100元\n共100元")
+
     if len(itemList) ==0: return TextSendMessage('您沒有歷史訂單')
     msg = f'您在這段期間共有 {len(itemList)} 筆訂單\n'
     for index, item in enumerate(itemList):

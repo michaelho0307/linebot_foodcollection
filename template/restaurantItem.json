@@ -45,7 +45,7 @@
         "action": {
           "type": "uri",
           "label": "修改餐廳",
-          "uri": "https://liff.line.me/1657460100-1qv3lDzW"
+          "uri": "https://liff.line.me/1657460100-1qv3lDzW/demo2"
         },
         "height": "sm",
         "color": "#450020"
@@ -55,7 +55,7 @@
         "action": {
           "type": "uri",
           "label": "查看餐廳選項",
-          "uri": "https://liff.line.me/1657460100-1qv3lDzW"
+          "uri": "https://liff.line.me/1657460100-1qv3lDzW/demo2"
         },
         "height": "sm",
         "color": "#450020"

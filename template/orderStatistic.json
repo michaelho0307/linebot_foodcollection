@@ -30,7 +30,7 @@
             },
             {
               "type": "text",
-              "text": "阿英滷肉飯"
+              "text": "阿孟河粉"
             }
           ]
         },
@@ -66,11 +66,49 @@
           "contents": [
             {
               "type": "text",
-              "text": "滷肉飯"
+              "text": "燒牛肉河粉"
             },
             {
               "type": "text",
-              "text": "3"
+              "text": "6"
+            },
+            {
+              "type": "text",
+              "text": "150"
+            }
+          ],
+          "margin": "sm"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "海鮮米線"
+            },
+            {
+              "type": "text",
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "text": "130"
+            }
+          ],
+          "margin": "sm"
+        },
+        {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "text",
+              "text": "鮭魚炒飯"
+            },
+            {
+              "type": "text",
+              "text": "4"
             },
             {
               "type": "text",
@@ -85,72 +123,15 @@
           "contents": [
             {
               "type": "text",
-              "text": "餛飩麵"
+              "text": "牛肉炒飯"
             },
             {
               "type": "text",
-              "text": "4"
+              "text": "3"
             },
             {
               "type": "text",
-              "text": "240"
-            }
-          ],
-          "margin": "sm"
-        },
-        {
-          "type": "box",
-          "layout": "horizontal",
-          "contents": [
-            {
-              "type": "text",
-              "text": "牛肉麵"
-            },
-            {
-              "type": "text",
-              "text": "2"
-            },
-            {
-              "type": "text",
-              "text": "200"
-            }
-          ],
-          "margin": "sm"
-        },
-        {
-          "type": "box",
-          "layout": "horizontal",
-          "contents": [
-            {
-              "type": "text",
-              "text": "燙青菜"
-            },
-            {
-              "type": "text",
-              "text": "1"
-            },
-            {
-              "type": "text",
-              "text": "30"
-            }
-          ],
-          "margin": "sm"
-        },
-        {
-          "type": "box",
-          "layout": "horizontal",
-          "contents": [
-            {
-              "type": "text",
-              "text": "飲料"
-            },
-            {
-              "type": "text",
-              "text": "1"
-            },
-            {
-              "type": "text",
-              "text": "32"
+              "text": "100"
             }
           ],
           "margin": "sm"
@@ -174,7 +155,7 @@
             },
             {
               "type": "text",
-              "text": "1782"
+              "text": "1810"
             }
           ],
           "margin": "md"
