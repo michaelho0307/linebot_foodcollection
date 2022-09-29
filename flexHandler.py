@@ -69,7 +69,10 @@ def getStarRestaurantItem(name, num, uri):
     pass
 
 def getStarRestaurantItems(itemList):
-    pass
+    template = json.load(open('./template/starRestaurant.json','r+',encoding='UTF-8'))
+    content = FlexSendMessage(alt_text='歷史訂單', contents=template)
+    return content
+
 
 
 ### ============== group functionality ================ ###
