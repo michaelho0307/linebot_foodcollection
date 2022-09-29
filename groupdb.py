@@ -22,10 +22,10 @@ database = client['LinebotDB']
 groupSchema = database['groupSchema']
 
 def groupInfoInit(gid):
-    members = line_bot_api.get_group_member_ids(gid)
+    #members = line_bot_api.get_group_member_ids(gid)
     groupInfo = {
         'groupID': gid,
-        'groupMember': members,
+        'groupMember': [],
         'count': 0,
         'restaurants': [],
         'payment': [],
