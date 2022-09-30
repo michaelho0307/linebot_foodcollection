@@ -42,7 +42,7 @@ def getRestaurantDecider(name):
 def getReminder(itemList):
 
     # for demo purpose only
-    return TextSendMessage("應付金額 100 元\n提醒您 須在下午6點前完成點餐")
+    return TextSendMessage("應付金額 100 元\n提醒您 須在12:00前完成點餐")
 
     if len(itemList)==0: return TextSendMessage('您目前尚無訂單')
     msg = '您有以下訂單'
